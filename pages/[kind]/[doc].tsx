@@ -3,12 +3,14 @@ import { getData } from '../../src/markdown';
 import { Document, urllize } from '../../src/document';
 import { filter, head, pipe, reduce } from 'ramda';
 import produce from 'immer';
+import { FinalizedDocument, renderDoc } from '../../src/doc_store';
+import { Interweave } from 'interweave';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const documents = await getData();
 
   return reduce(
-    produce((draft, doc: Document) => {
+    produce((draft, doc) => {
       draft.paths.push({
         params: {
           kind: urllize(doc.config.kind),
@@ -32,11 +34,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-const Doc: NextPage<{ document: Document }> = ({ document }) => {
+const Doc: NextPage<{ document: FinalizedDocument }> = ({ document }) => {
   return (
     <div>
       <h2>{document.config.name}</h2>
-      <p>{document.text}</p>
+      <Interweave content={renderDoc(document)} />\
+      {document.linked.map(({ name }) => (
+        <span key={name}>{name}</span>
+      ))}
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { readdir, readFile, stat } from 'fs/promises';
 import * as root from 'app-root-path';
 import { parseDocument, Document } from './document';
+import { FinalizedDocument, linkDocuments } from './doc_store';
 
 // const markdown = md({
 //   html: true,
@@ -28,8 +29,11 @@ async function allFiles(directory: string): Promise<Document[]> {
   return files;
 }
 
-let data: Document[] = [];
+let data: FinalizedDocument[] = [];
 export async function getData() {
-  if (data.length === 0) data = await allFiles(root + '/data');
+  if (data.length === 0) {
+    const inter = await allFiles(root + '/data');
+    data = linkDocuments(inter);
+  }
   return data;
 }
