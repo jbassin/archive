@@ -52,3 +52,4 @@ jobs:
           publish_dir: ./out
           publish_branch: web
           cname: archive.iridium-server.com
+          force_orphan: true
