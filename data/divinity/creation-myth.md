@@ -1,6 +1,4 @@
 ---
-name: Creation Myth
-kind: divinity
 refs: story of creation | althane's creation
 ---
 

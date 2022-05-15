@@ -14,11 +14,9 @@ const Index: NextPage<{ documents: Document[] }> = ({ documents }) => {
     <div>
       <ul>
         {documents.map((doc) => (
-          <li key={doc.config.name}>
-            <a
-              href={`/${urllize(doc.config.kind)}/${urllize(doc.config.name)}`}
-            >
-              {doc.config.name}
+          <li key={doc.name}>
+            <a href={`/${urllize(doc.kind)}/${urllize(doc.name)}`}>
+              {doc.name}
             </a>
           </li>
         ))}

@@ -1,6 +1,4 @@
 ---
-name: Lacuna
-kind: divinity
 refs: higher kind
 ipa: Lah-kyoo-na
 ---
