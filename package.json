@@ -20,7 +20,8 @@
     "next": "12.1.6",
     "ramda": "^0.28.0",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "tailwindcss-opentype": "^1.0.0"
   },
   "devDependencies": {
     "@types/app-root-path": "^1.2.4",

@@ -15,12 +15,18 @@ module.exports = {
         teko: ['Teko'],
       },
       colors: {
-        background: '#F2EFE9',
+        background: {
+          400: '#F3F1EB',
+          500: '#F2EFE9',
+          600: '#E0D9CB',
+          700: '#DBD0BC',
+          900: '#C9CCC2',
+        },
         crimson: {
           500: '#58180D',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-opentype')],
 };

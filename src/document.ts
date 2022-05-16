@@ -14,9 +14,13 @@ import {
 } from 'ramda';
 import { Config, parseConfig } from './config';
 
+export type Section =
+  | { columns: 1; section: string }
+  | { columns: 2; lhs: string; rhs: string };
+
 export type Document = {
   config: Config;
-  text: string;
+  text: Section[];
   kind: string;
   name: string;
   path: string[];
@@ -52,6 +56,17 @@ function parseFilepath(filepath: string) {
   };
 }
 
+function parseColumns(doc: string): Section[] {
+  return doc.split('+++').map((section) => {
+    const split = section.split('///');
+
+    if (split.length === 1) {
+      return { columns: 1, section: section.trim() };
+    }
+    return { columns: 2, lhs: split[0].trim(), rhs: split[1].trim() };
+  });
+}
+
 export function parseDocument(filepath: string, document: string): Document {
   const { kind, name, path } = parseFilepath(filepath);
 
@@ -65,7 +80,7 @@ export function parseDocument(filepath: string, document: string): Document {
 
     return {
       config: parseConfig(rawConfig),
-      text: rawText.join('\n').trim(),
+      text: parseColumns(rawText.join('\n').trim()),
       kind,
       name,
       path,
@@ -74,7 +89,7 @@ export function parseDocument(filepath: string, document: string): Document {
 
   return {
     config: parseConfig(''),
-    text: document.trim(),
+    text: parseColumns(document.trim()),
     kind,
     name,
     path,

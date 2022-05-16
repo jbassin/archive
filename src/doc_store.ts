@@ -1,7 +1,7 @@
 import produce from 'immer';
 import { chain, find, map, pipe } from 'ramda';
 import { Config } from './config';
-import { Document, urllize } from './document';
+import { Document, Section, urllize } from './document';
 
 import md from 'markdown-it';
 import mdcontainer from '@gerhobbelt/markdown-it-container';
@@ -9,7 +9,7 @@ import mdtable from 'markdown-it-multimd-table';
 
 export type FinalizedDocument = {
   config: Config;
-  text: string;
+  text: Section[];
   linked: { kind: string; name: string }[];
   kind: string;
   name: string;
@@ -42,14 +42,29 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
         )
           continue replacers;
 
-        document.text = document.text.replace(re, (match) => {
+        const replacer = (match: string) => {
           linkedDocs = produce(linkedDocs, (draft) => {
             draft.push({ name: linkedDoc.name, kind: linkedDoc.kind });
           });
           return `[${match}](/${urllize(linkedDoc.kind)}/${urllize(
             linkedDoc.name
           )})`;
-        });
+        };
+
+        for (let idx = 0; idx < document.text.length; idx++) {
+          const section = document.text[idx];
+          switch (section.columns) {
+            case 1: {
+              section.section = section.section.replace(re, replacer);
+              break;
+            }
+            case 2: {
+              section.lhs = section.lhs.replace(re, replacer);
+              section.rhs = section.rhs.replace(re, replacer);
+              break;
+            }
+          }
+        }
       }
 
       document.linked = linkedDocs;
@@ -66,6 +81,19 @@ const markdown = md({
   .use(mdcontainer)
   .use(mdtable);
 
-export function renderDoc(document: FinalizedDocument): string {
-  return markdown.render(document.text);
+export function renderDoc(document: FinalizedDocument): Section[] {
+  return produce(document.text, (draft) => {
+    for (const section of draft) {
+      switch (section.columns) {
+        case 1: {
+          section.section = markdown.render(section.section);
+          break;
+        }
+        case 2: {
+          section.lhs = markdown.render(section.lhs);
+          section.rhs = markdown.render(section.rhs);
+        }
+      }
+    }
+  });
 }

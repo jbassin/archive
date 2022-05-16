@@ -6,8 +6,9 @@
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/no-explicit-any": "error"
+    "@typescript-eslint/no-unused-vars": 2,
+    "@typescript-eslint/no-explicit-any": 2,
+    "@next/next/no-img-element": 0
   },
   "ignorePatterns": ["**/.next/*", "**/out/*", "**/node_modules/*"]
 }

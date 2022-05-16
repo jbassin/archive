@@ -49,6 +49,40 @@ function transform(node: HTMLElement, children: Node[]): React.ReactNode {
   if (node.tagName === 'h3') {
     return <h1 className="text-8xl font-changa text-blue-500">{children}</h1>;
   }
+
+  if (node.tagName === 'ol') {
+    return <ol className="list-decimal list-inside">{children}</ol>;
+  }
+
+  if (node.tagName === 'ul') {
+    return <ul className="list-disc list-inside">{children}</ul>;
+  }
+
+  if (node.tagName === 'p') {
+    return <p className="font-gelasio mb-2">{children}</p>;
+  }
+
+  if (node.tagName === 'a') {
+    return (
+      <a
+        href={node.getAttribute('href') ?? undefined}
+        className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double"
+      >
+        {children}
+      </a>
+    );
+  }
+}
+
+function subheading(kind: string) {
+  switch (kind.toLocaleLowerCase()) {
+    case 'ancestry':
+      return 'know your roots';
+    case 'divinity':
+      return 'knowledge of the gods';
+    default:
+      return 'repository of knowledge';
+  }
 }
 
 const Doc: NextPage<{
@@ -58,17 +92,82 @@ const Doc: NextPage<{
   return (
     <div className="container mx-auto mt-6">
       <div className="mt-6">
-        <h1 className="text-2xl text-crimson-500 font-eczar">archive.</h1>
+        <h1 className="text-2xl text-crimson-500 font-eczar">
+          archive.
+          <span className="text-lg text-slate-500 font-tauri pl-2">
+            {subheading(document.kind)}
+          </span>
+        </h1>
+      </div>
+      <div className="hidden md:block relative h-32 overflow-hidden rounded">
+        <img
+          src="https://i.imgur.com/OpyUXz1.png"
+          alt=""
+          style={{
+            width: '100%',
+          }}
+          className="absolute"
+        />
       </div>
       <div className="mt-4 flex flex-row">
-        <div className="basis-1/4">
-          <Tree tree={tree} />
+        <div className="basis-1/6">
+          <Tree tree={tree} selected={document.name} />
         </div>
-        <div className="basis-3/4">
-          <h2>{document.name}</h2>
-          <h3>{document.kind}</h3>
-          <h4>{document.path}</h4>
-          <Interweave content={renderDoc(document)} transform={transform} />
+        <div className="basis-5/6">
+          <h2 className="font-eczar text-xl text-crimson-500">
+            {document.name}{' '}
+            {document.config.ipa ? (
+              <span className="text-base small-caps">
+                ({document.config.ipa})
+              </span>
+            ) : (
+              <></>
+            )}
+          </h2>
+          <div className="flex flex-row">
+            <div className="basis-5/6 font-gelasio">
+              {renderDoc(document).map((section, idx) => {
+                switch (section.columns) {
+                  case 1: {
+                    return (
+                      <Interweave
+                        key={idx}
+                        content={section.section}
+                        transform={transform}
+                      />
+                    );
+                  }
+                  case 2: {
+                    return (
+                      <div key={idx} className="flex flex-row">
+                        <div className="basis-1/2 font-gelasio pr-2">
+                          <Interweave
+                            content={section.lhs}
+                            transform={transform}
+                          />
+                        </div>
+                        <div className="basis-1/2 font-gelasio pl-2">
+                          <Interweave
+                            content={section.rhs}
+                            transform={transform}
+                          />
+                        </div>
+                      </div>
+                    );
+                  }
+                }
+              })}
+            </div>
+            <div className="basis-1/6">
+              {document.config.img ? (
+                <>
+                  <img src={document.config.img} alt="" />
+                </>
+              ) : (
+                <></>
+              )}
+            </div>
+          </div>
           {document.linked.map(({ name }) => (
             <span key={name}>{name}</span>
           ))}
