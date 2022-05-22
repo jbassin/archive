@@ -9,6 +9,7 @@ import { polyfill } from 'interweave-ssr';
 import Tree from '../../components/tree';
 import Search from '../../components/search';
 import Link from 'next/link';
+import Head from 'next/head';
 
 polyfill();
 
@@ -97,97 +98,102 @@ const Doc: NextPage<{
   tree: DocumentHierarchy;
 }> = ({ document, tree }) => {
   return (
-    <div className="container mx-auto mt-6">
-      <div className="flex flex-col">
-        <div className="flex flex-col md:flex-row items-center mt-6 mb-1">
-          <h1 className="text-2xl text-crimson-500 font-eczar">
-            archive.
-            <span className="text-lg text-slate-500 font-tauri pl-2">
-              {subheading(document.kind)}
-            </span>
-          </h1>
-          <div className="flex-grow" />
-          <Search className="z-10 w-full md:w-2/5" />
-        </div>
-        <div className="hidden md:block relative h-32 overflow-hidden rounded">
-          <img
-            src="https://i.imgur.com/OpyUXz1.png"
-            alt=""
-            className="absolute w-full"
-          />
-        </div>
-      </div>
-      <div className="mt-4 flex flex-row">
-        <div className="hidden md:block md:basis-1/5 lg:basis-1/6">
-          <Tree tree={tree} kind={document.kind} selected={document.name} />
-        </div>
-        <div className="md:basis-4/5 lg:basis-5/6">
-          <h2 className="font-eczar text-xl text-crimson-500">
-            {document.name}{' '}
-            {document.config.ipa ? (
-              <span className="text-base small-caps">
-                ({document.config.ipa})
+    <>
+      <Head>
+        <title>The Archive • {document.name}</title>
+      </Head>
+      <div className="container mx-auto mt-6">
+        <div className="flex flex-col">
+          <div className="flex flex-col md:flex-row items-center mt-6 mb-1">
+            <h1 className="text-2xl text-crimson-500 font-eczar">
+              archive.
+              <span className="text-lg text-slate-500 font-tauri pl-2">
+                {subheading(document.kind)}
               </span>
+            </h1>
+            <div className="flex-grow" />
+            <Search className="z-10 w-full md:w-2/5" />
+          </div>
+          <div className="hidden md:block relative h-32 overflow-hidden rounded">
+            <img
+              src="https://i.imgur.com/OpyUXz1.png"
+              alt=""
+              className="absolute w-full"
+            />
+          </div>
+        </div>
+        <div className="mt-4 flex flex-row">
+          <div className="hidden md:block md:basis-1/5 lg:basis-1/6">
+            <Tree tree={tree} kind={document.kind} selected={document.name} />
+          </div>
+          <div className="md:basis-4/5 lg:basis-5/6">
+            <h2 className="font-eczar text-xl text-crimson-500">
+              {document.name}{' '}
+              {document.config.ipa ? (
+                <span className="text-base small-caps">
+                  ({document.config.ipa})
+                </span>
+              ) : (
+                <></>
+              )}
+            </h2>
+            <div className="flex flex-row">
+              <div className="lg:basis-5/6 font-gelasio">
+                {renderDoc(document).map((section, idx) => {
+                  switch (section.columns) {
+                    case 1: {
+                      return (
+                        <Interweave
+                          key={idx}
+                          content={section.section}
+                          transform={transform}
+                        />
+                      );
+                    }
+                    case 2: {
+                      return (
+                        <div key={idx} className="flex flex-row">
+                          <div className="basis-1/2 font-gelasio pr-2">
+                            <Interweave
+                              content={section.lhs}
+                              transform={transform}
+                            />
+                          </div>
+                          <div className="basis-1/2 font-gelasio pl-2">
+                            <Interweave
+                              content={section.rhs}
+                              transform={transform}
+                            />
+                          </div>
+                        </div>
+                      );
+                    }
+                  }
+                })}
+              </div>
+            </div>
+            {document.linked.length > 0 ? (
+              <>
+                <span className="font-gelasio mr-1 small-caps text-sm">
+                  Related documents:
+                </span>
+                {document.linked.map((doc) => (
+                  <a
+                    key={doc.name}
+                    className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double mr-1 small-caps text-sm"
+                    href={`/${urllize(doc.kind)}/${urllize(doc.name)}`}
+                  >
+                    {doc.name}
+                  </a>
+                ))}{' '}
+              </>
             ) : (
               <></>
             )}
-          </h2>
-          <div className="flex flex-row">
-            <div className="lg:basis-5/6 font-gelasio">
-              {renderDoc(document).map((section, idx) => {
-                switch (section.columns) {
-                  case 1: {
-                    return (
-                      <Interweave
-                        key={idx}
-                        content={section.section}
-                        transform={transform}
-                      />
-                    );
-                  }
-                  case 2: {
-                    return (
-                      <div key={idx} className="flex flex-row">
-                        <div className="basis-1/2 font-gelasio pr-2">
-                          <Interweave
-                            content={section.lhs}
-                            transform={transform}
-                          />
-                        </div>
-                        <div className="basis-1/2 font-gelasio pl-2">
-                          <Interweave
-                            content={section.rhs}
-                            transform={transform}
-                          />
-                        </div>
-                      </div>
-                    );
-                  }
-                }
-              })}
-            </div>
           </div>
-          {document.linked.length > 0 ? (
-            <>
-              <span className="font-gelasio mr-1 small-caps text-sm">
-                Related documents:
-              </span>
-              {document.linked.map((doc) => (
-                <a
-                  key={doc.name}
-                  className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double mr-1 small-caps text-sm"
-                  href={`/${urllize(doc.kind)}/${urllize(doc.name)}`}
-                >
-                  {doc.name}
-                </a>
-              ))}{' '}
-            </>
-          ) : (
-            <></>
-          )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
