@@ -9,6 +9,7 @@ import { useLocalStorage } from '../src/local_storage';
 import { DocumentHierarchy } from '../src/markdown';
 import { Transition } from '@headlessui/react';
 import Link from 'next/link';
+import { map, pipe, prop, sortBy } from 'ramda';
 
 function color(idx: number) {
   return ['#CA9703', '#D5AD36', '#4488BF', '#265999'][idx % 4];
@@ -104,15 +105,18 @@ export default function Tree({
         leaveTo="opacity-0 scale-95"
       >
         <>
-          {tree.children.map((tree) => (
-            <Tree
-              key={tree.name}
-              tree={tree}
-              level={curLevel + 1}
-              kind={kind}
-              selected={selected}
-            />
-          ))}
+          {pipe(
+            sortBy<DocumentHierarchy>(prop('name')),
+            map((tree: DocumentHierarchy) => (
+              <Tree
+                key={tree.name}
+                tree={tree}
+                level={curLevel + 1}
+                kind={kind}
+                selected={selected}
+              />
+            ))
+          )(tree.children)}
         </>
       </Transition>
     </div>
