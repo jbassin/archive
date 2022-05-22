@@ -1,11 +1,12 @@
 import produce from 'immer';
-import { chain, find, map, pipe } from 'ramda';
+import { chain, concat, find, map, pipe, prop, sortBy, uniqBy } from 'ramda';
 import { Config } from './config';
 import { Document, Section, urllize } from './document';
 
 import md from 'markdown-it';
 import mdcontainer from '@gerhobbelt/markdown-it-container';
 import mdtable from 'markdown-it-multimd-table';
+import { WritableDraft } from 'immer/dist/internal';
 
 export type FinalizedDocument = {
   config: Config;
@@ -31,7 +32,7 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
     )
   )(documents);
 
-  return produce(documents as FinalizedDocument[], (documentDraft) => {
+  const inter = produce(documents as FinalizedDocument[], (documentDraft) => {
     for (const document of documentDraft) {
       let linkedDocs: { kind: string; name: string }[] = [];
 
@@ -68,6 +69,59 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
       }
 
       document.linked = linkedDocs;
+    }
+  });
+
+  const append = (
+    rec: WritableDraft<
+      Record<
+        string,
+        {
+          kind: string;
+          name: string;
+        }[]
+      >
+    >,
+    key: string,
+    item: {
+      kind: string;
+      name: string;
+    }
+  ) => {
+    if (rec[key]) {
+      rec[key].push(item);
+    } else {
+      rec[key] = [item];
+    }
+  };
+
+  const backrefrences = produce(
+    {} as Record<
+      string,
+      {
+        kind: string;
+        name: string;
+      }[]
+    >,
+    (draft) => {
+      for (const document of inter) {
+        for (const link of document.linked) {
+          append(draft, link.name, {
+            name: document.name,
+            kind: document.kind,
+          });
+        }
+      }
+    }
+  );
+
+  return produce(inter, (draft) => {
+    for (const document of draft) {
+      document.linked = pipe(
+        concat(document.linked),
+        sortBy(prop('name')),
+        uniqBy(prop('name'))
+      )(backrefrences[document.name] ?? []);
     }
   });
 }

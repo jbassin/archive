@@ -80,6 +80,12 @@ function subheading(kind: string) {
       return 'know your roots';
     case 'divinity':
       return 'knowledge of the gods';
+    case 'material':
+      return 'fundamental building blocks';
+    case 'natural phenomena':
+      return 'by universal decree';
+    case 'region':
+      return 'worldly insight';
     default:
       return 'repository of knowledge';
   }
@@ -110,10 +116,10 @@ const Doc: NextPage<{
         />
       </div>
       <div className="mt-4 flex flex-row">
-        <div className="basis-1/6">
-          <Tree tree={tree} selected={document.name} />
+        <div className="basis-1/5 lg:basis-1/6">
+          <Tree tree={tree} kind={document.kind} selected={document.name} />
         </div>
-        <div className="basis-5/6">
+        <div className="basis-4/5 lg:basis-5/6">
           <h2 className="font-eczar text-xl text-crimson-500">
             {document.name}{' '}
             {document.config.ipa ? (
@@ -168,9 +174,24 @@ const Doc: NextPage<{
               )}
             </div>
           </div>
-          {document.linked.map(({ name }) => (
-            <span key={name}>{name}</span>
-          ))}
+          {document.linked.length > 0 ? (
+            <>
+              <span className="font-gelasio mr-1 small-caps text-sm">
+                Related documents:
+              </span>
+              {document.linked.map((doc) => (
+                <a
+                  key={doc.name}
+                  className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double mr-1 small-caps text-sm"
+                  href={`/${urllize(doc.kind)}/${urllize(doc.name)}`}
+                >
+                  {doc.name}
+                </a>
+              ))}{' '}
+            </>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>

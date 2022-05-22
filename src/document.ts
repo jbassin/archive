@@ -37,7 +37,7 @@ function parseFilepath(filepath: string) {
     drop(1)
   )(filepath);
 
-  const kind = head(path) as string;
+  const kind = pipe(head, replace(/\.md$/, ''))(path) as string;
   const name = pipe(
     last,
     split('.'),
