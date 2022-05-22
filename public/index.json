@@ -1,0 +1,3450 @@
+{
+  "version": "2.3.9",
+  "fields": ["name", "text"],
+  "fieldVectors": [
+    ["name/Ancestry/Dwarf", [0, 1.822]],
+    [
+      "text/Ancestry/Dwarf",
+      [
+        0, 2.022, 1, 2.395, 2, 1.788, 3, 1.788, 4, 1.788, 5, 3.805, 6, 2.622, 7,
+        1.379, 8, 1.788, 9, 1.788, 10, 1.788, 11, 0.748, 12, 1.788, 13, 0.909,
+        14, 1.788, 15, 2.022, 16, 1.379, 17, 1.788, 18, 1.627, 19, 2.022, 20,
+        1.788, 21, 1.788, 22, 1.11, 23, 1.788, 24, 1.788, 25, 1.788, 26, 1.788,
+        27, 1.379, 28, 1.788, 29, 1.788, 30, 1.788, 31, 0.614, 32, 1.379, 33,
+        1.788, 34, 1.788, 35, 1.788, 36, 1.788, 37, 1.788, 38, 1.788, 39, 1.788,
+        40, 1.379, 41, 1.11, 42, 1.788, 43, 1.11, 44, 1.788, 45, 1.788, 46,
+        1.788, 47, 1.788, 48, 2.022, 49, 1.332, 50, 1.788, 51, 1.379, 52, 1.788,
+        53, 1.788, 54, 1.788, 55, 1.788, 56, 1.788, 57, 1.788, 58, 1.788, 59,
+        1.788, 60, 1.379, 61, 1.788, 62, 1.788, 63, 1.788, 64, 1.788, 65, 1.788,
+        66, 1.379, 67, 1.788, 68, 1.788, 69, 1.788, 70, 1.788, 71, 1.788, 72,
+        1.788, 73, 1.788, 74, 1.788, 75, 1.788, 76, 1.788, 77, 1.11, 78, 1.788,
+        79, 1.788, 80, 1.788, 81, 1.788, 82, 1.788, 83, 2.622, 84, 2.622, 85,
+        1.379, 86, 1.788, 87, 1.627, 88, 2.395, 89, 1.788, 90, 1.788, 91, 1.788,
+        92, 1.11, 93, 1.788, 94, 1.788, 95, 1.788, 96, 1.11, 97, 1.788, 98,
+        1.379, 99, 1.379, 100, 1.788, 101, 1.788, 102, 1.788, 103, 1.379, 104,
+        1.379, 105, 1.788, 106, 1.379, 107, 1.788, 108, 1.788
+      ]
+    ],
+    ["name/Divinity/Creation Myth", [109, 1.066, 110, 1.325]],
+    [
+      "text/Divinity/Creation Myth",
+      [
+        7, 1.532, 11, 1.183, 18, 0.773, 41, 0.773, 43, 1.538, 49, 1.259, 60,
+        0.96, 87, 1.756, 88, 0.96, 98, 0.96, 99, 2.182, 109, 1.538, 111, 2.667,
+        112, 1.986, 113, 1.245, 114, 0.96, 115, 2.479, 116, 1.245, 117, 1.986,
+        118, 0.96, 119, 1.245, 120, 1.245, 121, 1.245, 122, 1.245, 123, 1.532,
+        124, 1.245, 125, 1.532, 126, 1.986, 127, 2.384, 128, 0.773, 129, 1.245,
+        130, 1.986, 131, 2.479, 132, 1.245, 133, 1.245, 134, 0.96, 135, 1.233,
+        136, 1.245, 137, 1.245, 138, 1.245, 139, 0.96, 140, 0.96, 141, 0.96,
+        142, 1.532, 143, 1.259, 144, 1.245, 145, 1.986, 146, 1.245, 147, 1.245,
+        148, 3.09, 149, 1.245, 150, 0.773, 151, 1.245, 152, 1.245, 153, 1.245,
+        154, 2.479, 155, 1.245, 156, 1.245, 157, 2.479, 158, 0.96, 159, 1.912,
+        160, 0.96, 161, 1.986, 162, 2.182, 163, 1.245, 164, 1.245, 165, 1.245,
+        166, 1.986, 167, 1.245, 168, 1.245, 169, 1.532, 170, 1.245, 171, 1.245,
+        172, 1.245, 173, 1.986, 174, 1.532, 175, 0.96, 176, 0.96, 177, 1.245,
+        178, 0.96, 179, 1.245, 180, 1.245, 181, 1.245, 182, 1.986, 183, 1.245,
+        184, 1.245, 185, 1.245, 186, 0.831, 187, 1.259, 188, 0.773, 189, 0.773,
+        190, 1.245, 191, 1.245, 192, 1.245, 193, 2.182, 194, 1.245, 195, 1.245,
+        196, 1.245, 197, 1.245, 198, 0.96, 199, 1.986, 200, 1.245, 201, 0.773,
+        202, 1.245, 203, 1.245, 204, 0.96, 205, 1.245, 206, 1.245, 207, 1.245,
+        208, 1.245, 209, 1.245, 210, 1.532, 211, 1.245, 212, 1.245, 213, 1.245,
+        214, 1.245, 215, 1.532, 216, 1.245, 217, 1.245, 218, 0.773, 219, 1.245,
+        220, 1.245, 221, 0.773, 222, 1.245, 223, 1.245, 224, 1.245, 225, 0.96,
+        226, 1.245, 227, 1.245, 228, 1.245, 229, 1.986, 230, 1.245, 231, 1.245,
+        232, 1.245, 233, 1.245, 234, 0.96, 235, 1.245, 236, 1.245, 237, 1.245,
+        238, 1.245, 239, 1.538, 240, 1.245, 241, 1.245, 242, 0.773, 243, 0.96,
+        244, 1.245, 245, 0.96, 246, 1.245, 247, 1.245, 248, 1.245, 249, 1.245,
+        250, 1.245, 251, 0.96, 252, 1.245
+      ]
+    ],
+    ["name/Divinity/Lacuna", [148, 1.822]],
+    [
+      "text/Divinity/Lacuna",
+      [
+        11, 1.317, 22, 1.955, 109, 2.382, 110, 2.429, 135, 1.955, 139, 2.429,
+        140, 2.429, 141, 2.429, 142, 2.429, 158, 2.429, 169, 2.429, 187, 1.6,
+        189, 1.955, 198, 2.429, 239, 1.955, 253, 3.149, 254, 3.149, 255, 3.149,
+        256, 3.149, 257, 3.149, 258, 3.149, 259, 3.149
+      ]
+    ],
+    ["name/Material/Cold Iron", [260, 1.325, 261, 1.325]],
+    ["text/Material/Cold Iron", [260, 2.841, 262, 3.684, 263, 3.684]],
+    ["name/Material/Material", [264, 1.822]],
+    [
+      "text/Material/Material",
+      [264, 2.817, 265, 3.653, 266, 3.653, 267, 3.653]
+    ],
+    ["name/Natural Phenomena/Manifestation", [268, 1.822]],
+    [
+      "text/Natural Phenomena/Manifestation",
+      [
+        11, 0.983, 13, 1.194, 15, 1.812, 49, 1.194, 51, 1.812, 106, 1.812, 159,
+        1.812, 160, 1.812, 174, 1.812, 186, 1.33, 187, 1.615, 189, 1.458, 268,
+        2.779, 269, 1.812, 270, 2.349, 271, 2.349, 272, 3.178, 273, 2.451, 274,
+        3.178, 275, 1.812, 276, 2.451, 277, 2.349, 278, 1.812, 279, 1.458, 280,
+        2.349, 281, 2.349, 282, 2.349, 283, 2.349, 284, 2.349, 285, 2.349, 286,
+        2.349, 287, 2.349, 288, 2.349, 289, 2.349, 290, 2.349, 291, 3.178, 292,
+        3.178, 293, 2.349, 294, 2.349, 295, 1.194, 296, 2.349, 297, 2.349, 298,
+        1.973, 299, 2.349, 300, 1.812, 301, 2.349, 302, 2.349, 303, 2.349, 304,
+        3.178, 305, 3.178, 306, 2.349, 307, 2.349, 308, 2.349, 309, 2.349, 310,
+        2.349, 311, 2.349, 312, 2.349
+      ]
+    ],
+    ["name/Natural Phenomena/The Cycle", [313, 1.466]],
+    [
+      "text/Natural Phenomena/The Cycle",
+      [
+        13, 0.759, 19, 1.151, 31, 1.157, 32, 1.151, 40, 1.151, 43, 1.421, 77,
+        1.729, 92, 0.927, 96, 0.927, 103, 2.149, 111, 2.41, 114, 1.151, 123,
+        1.151, 128, 0.927, 143, 0.759, 150, 1.421, 162, 1.151, 178, 1.151, 186,
+        0.624, 201, 0.927, 204, 1.151, 218, 0.927, 225, 1.151, 239, 0.927, 242,
+        0.927, 243, 1.151, 269, 1.151, 275, 1.151, 279, 0.927, 295, 1.416, 313,
+        2.298, 314, 1.421, 315, 2.29, 316, 1.493, 317, 1.493, 318, 1.493, 319,
+        1.493, 320, 1.493, 321, 1.493, 322, 1.151, 323, 1.493, 324, 2.786, 325,
+        2.786, 326, 0.759, 327, 1.493, 328, 1.493, 329, 1.766, 330, 1.493, 331,
+        1.151, 332, 2.786, 333, 1.493, 334, 1.493, 335, 2.786, 336, 1.493, 337,
+        1.493, 338, 1.493, 339, 1.493, 340, 1.493, 341, 1.493, 342, 1.766, 343,
+        1.151, 344, 1.493, 345, 1.151, 346, 2.29, 347, 1.493, 348, 1.766, 349,
+        1.493, 350, 1.493, 351, 1.493, 352, 1.493, 353, 1.493, 354, 1.493, 355,
+        1.493, 356, 1.493, 357, 2.29, 358, 1.766, 359, 1.493, 360, 2.29, 361,
+        1.151, 362, 1.493, 363, 1.493, 364, 1.493, 365, 2.29, 366, 1.493, 367,
+        1.493, 368, 1.493, 369, 1.493, 370, 1.493, 371, 1.493, 372, 1.493, 373,
+        1.493, 374, 1.493, 375, 1.493, 376, 1.493, 377, 1.493, 378, 1.493, 379,
+        1.493, 380, 1.766, 381, 1.493, 382, 1.493, 383, 1.493, 384, 1.493, 385,
+        1.151, 386, 1.151, 387, 1.493, 388, 0.927, 389, 1.151, 390, 1.493, 391,
+        1.493, 392, 1.493, 393, 1.493, 394, 1.151, 395, 1.493, 396, 1.493, 397,
+        1.493, 398, 1.493, 399, 1.493, 400, 1.493, 401, 1.493, 402, 1.493, 403,
+        1.493, 404, 1.493, 405, 1.493, 406, 1.493, 407, 1.493, 408, 1.151, 409,
+        1.493, 410, 1.766, 411, 1.493, 412, 1.493, 413, 1.493, 414, 1.493, 415,
+        1.493, 416, 1.493, 417, 1.151
+      ]
+    ],
+    ["name/Natural Phenomena/Tidal", [418, 1.466]],
+    [
+      "text/Natural Phenomena/Tidal",
+      [
+        1, 2.365, 22, 1.383, 48, 1.719, 96, 1.383, 134, 1.719, 176, 1.719, 187,
+        1.132, 188, 1.383, 221, 1.383, 245, 1.719, 251, 1.719, 298, 1.383, 322,
+        1.719, 326, 1.132, 386, 1.719, 394, 1.719, 418, 2.176, 419, 2.365, 420,
+        2.365, 421, 2.365, 422, 2.228, 423, 1.719, 424, 1.383, 425, 2.365, 426,
+        3.066, 427, 2.228, 428, 3.066, 429, 2.228, 430, 3.506, 431, 2.228, 432,
+        2.228, 433, 2.228, 434, 2.228, 435, 2.228, 436, 2.228, 437, 2.228, 438,
+        1.719, 439, 2.228, 440, 2.228, 441, 2.228, 442, 2.228, 443, 2.228, 444,
+        2.228, 445, 2.228, 446, 1.719, 447, 1.719, 448, 2.228, 449, 2.228, 450,
+        2.228, 451, 2.228, 452, 1.719, 453, 2.228, 454, 3.066, 455, 2.228, 456,
+        2.228, 457, 2.228, 458, 2.228, 459, 2.228, 460, 2.228, 461, 2.228, 462,
+        2.228, 463, 2.228, 464, 2.228, 465, 1.383, 466, 2.228, 467, 2.228, 468,
+        1.719, 469, 2.228
+      ]
+    ],
+    ["name/Region/Ialassa", [470, 1.822]],
+    [
+      "text/Region/Ialassa",
+      [
+        31, 1.185, 143, 1.753, 221, 2.141, 278, 2.661, 295, 1.753, 470, 2.661,
+        471, 2.141, 472, 3.45, 473, 3.45, 474, 3.45, 475, 3.45
+      ]
+    ],
+    ["name/Region/Lantium", [476, 1.822]],
+    ["text/Region/Lantium", [31, 1.255, 471, 2.267, 476, 2.817, 477, 3.653]],
+    ["name/Region/Thyropae", [478, 1.822]],
+    [
+      "text/Region/Thyropae",
+      [471, 2.23, 478, 2.771, 479, 3.592, 480, 3.592, 481, 3.592, 482, 2.23]
+    ],
+    ["name/Region/Athrea", [483, 1.822]],
+    [
+      "text/Region/Athrea",
+      [
+        11, 0.742, 18, 1.101, 31, 1.061, 49, 0.901, 66, 1.368, 77, 1.101, 85,
+        1.368, 92, 1.101, 104, 1.368, 125, 1.368, 127, 2.01, 128, 1.101, 143,
+        1.324, 150, 1.101, 175, 2.01, 186, 1.292, 201, 1.101, 242, 1.101, 295,
+        0.901, 314, 1.101, 326, 0.901, 348, 1.368, 380, 2.01, 388, 1.101, 408,
+        2.383, 423, 1.368, 424, 1.101, 438, 1.368, 446, 1.368, 465, 1.101, 468,
+        1.368, 482, 1.101, 483, 2.627, 484, 1.773, 485, 1.368, 486, 1.773, 487,
+        1.773, 488, 1.773, 489, 1.773, 490, 1.773, 491, 2.606, 492, 1.773, 493,
+        1.773, 494, 1.773, 495, 1.773, 496, 2.606, 497, 1.773, 498, 1.773, 499,
+        1.368, 500, 1.773, 501, 1.773, 502, 1.773, 503, 1.773, 504, 1.773, 505,
+        1.773, 506, 1.773, 507, 1.773, 508, 1.773, 509, 1.773, 510, 1.773, 511,
+        1.773, 512, 2.606, 513, 1.773, 514, 1.773, 515, 1.773, 516, 2.606, 517,
+        2.606, 518, 1.773, 519, 1.773, 520, 3.09, 521, 1.773, 522, 1.773, 523,
+        1.773, 524, 1.773, 525, 1.773, 526, 1.773, 527, 1.773, 528, 1.773, 529,
+        1.773, 530, 1.368, 531, 1.368, 532, 1.773, 533, 1.773, 534, 1.773, 535,
+        1.773, 536, 1.773, 537, 1.773, 538, 1.773, 539, 1.773, 540, 1.773, 541,
+        1.773, 542, 1.773, 543, 1.773, 544, 1.773, 545, 1.368, 546, 1.773, 547,
+        1.773, 548, 1.773, 549, 1.773, 550, 1.773, 551, 1.773, 552, 1.773, 553,
+        1.773, 554, 1.773, 555, 1.773, 556, 1.773, 557, 1.773, 558, 1.368, 559,
+        1.773, 560, 1.773
+      ]
+    ],
+    ["name/Region/Salores", [561, 1.822]],
+    [
+      "text/Region/Salores",
+      [
+        13, 0.788, 16, 1.197, 27, 1.197, 31, 0.533, 41, 0.963, 87, 0.963, 118,
+        1.197, 135, 1.464, 186, 0.649, 188, 1.771, 193, 1.197, 210, 1.197, 215,
+        1.819, 218, 0.963, 234, 1.197, 261, 1.197, 273, 1.197, 276, 1.197, 279,
+        0.963, 298, 0.963, 300, 1.197, 313, 0.963, 314, 0.963, 326, 0.788, 329,
+        1.197, 331, 1.197, 342, 1.197, 343, 1.197, 345, 1.197, 358, 1.197, 361,
+        1.819, 385, 1.819, 388, 0.963, 389, 1.197, 410, 1.197, 417, 1.197, 418,
+        0.963, 419, 1.197, 420, 1.819, 421, 1.197, 424, 0.963, 425, 1.197, 447,
+        1.819, 452, 1.197, 465, 0.963, 482, 0.963, 485, 2.201, 499, 1.197, 530,
+        1.197, 531, 1.197, 545, 1.197, 558, 1.819, 561, 2.201, 562, 1.552, 563,
+        1.552, 564, 1.552, 565, 1.552, 566, 3.187, 567, 2.358, 568, 1.552, 569,
+        1.552, 570, 3.187, 571, 1.552, 572, 1.552, 573, 1.552, 574, 1.552, 575,
+        1.552, 576, 2.358, 577, 1.552, 578, 1.552, 579, 1.552, 580, 1.552, 581,
+        1.552, 582, 1.552, 583, 1.552, 584, 1.552, 585, 1.552, 586, 1.552, 587,
+        2.358, 588, 1.552, 589, 1.552, 590, 2.358, 591, 1.552, 592, 1.552, 593,
+        1.552, 594, 1.552, 595, 1.552, 596, 1.552, 597, 1.552, 598, 1.552, 599,
+        1.552, 600, 1.552, 601, 2.853, 602, 2.358, 603, 1.552, 604, 1.552, 605,
+        1.552, 606, 1.552, 607, 1.552, 608, 1.552, 609, 1.552, 610, 1.552, 611,
+        1.552, 612, 1.552, 613, 1.552, 614, 1.552, 615, 1.552, 616, 1.552, 617,
+        1.552, 618, 1.552, 619, 2.358, 620, 1.552, 621, 1.552, 622, 1.552, 623,
+        1.552, 624, 1.552, 625, 2.358, 626, 1.552, 627, 1.552, 628, 1.552, 629,
+        1.552, 630, 1.552, 631, 1.552, 632, 1.552, 633, 1.552, 634, 1.552, 635,
+        1.552, 636, 1.552, 637, 1.552, 638, 1.552, 639, 1.552, 640, 1.552, 641,
+        1.552, 642, 1.552, 643, 1.552, 644, 1.552, 645, 1.552
+      ]
+    ]
+  ],
+  "invertedIndex": [
+    [
+      "",
+      {
+        "_index": 1,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/Tidal": {} }
+      }
+    ],
+    ["170", { "_index": 102, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["25", { "_index": 89, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "698",
+      {
+        "_index": 315,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "72nd",
+      {
+        "_index": 318,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["abov", { "_index": 605, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "account",
+      {
+        "_index": 334,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "activ",
+      {
+        "_index": 221,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Tidal": {},
+          "Region/Ialassa": {}
+        }
+      }
+    ],
+    ["adapt", { "_index": 17, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["addit", { "_index": 574, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "adulthood",
+      { "_index": 86, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "advanc",
+      {
+        "_index": 322,
+        "name": {},
+        "text": {
+          "Natural Phenomena/The Cycle": {},
+          "Natural Phenomena/Tidal": {}
+        }
+      }
+    ],
+    ["advers", { "_index": 615, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "ag",
+      {
+        "_index": 88,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Divinity/Creation Myth": {} }
+      }
+    ],
+    [
+      "agreement",
+      { "_index": 642, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "agricultur",
+      { "_index": 469, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "alchemist'",
+      {
+        "_index": 285,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["allianc", { "_index": 489, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["allow", { "_index": 625, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "alter",
+      {
+        "_index": 300,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "althan",
+      {
+        "_index": 11,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Creation Myth": {},
+          "Divinity/Lacuna": {},
+          "Natural Phenomena/Manifestation": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "altogeth",
+      { "_index": 597, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "amount",
+      {
+        "_index": 390,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "ancestri",
+      { "_index": 212, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "ancient",
+      {
+        "_index": 360,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["anim", { "_index": 610, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "anoth",
+      { "_index": 167, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["anvil", { "_index": 65, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "apocalyps",
+      {
+        "_index": 332,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "appear",
+      {
+        "_index": 329,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "arcan",
+      {
+        "_index": 271,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "area",
+      {
+        "_index": 499,
+        "name": {},
+        "text": { "Region/Athrea": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "aristocrat",
+      { "_index": 636, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "around",
+      {
+        "_index": 87,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Creation Myth": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "arriv",
+      { "_index": 436, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "art",
+      {
+        "_index": 269,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "artifact",
+      {
+        "_index": 405,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "artific",
+      { "_index": 620, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    ["artist", { "_index": 550, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "aspect",
+      { "_index": 199, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "athrea",
+      {
+        "_index": 483,
+        "name": { "Region/Athrea": {} },
+        "text": { "Region/Athrea": {} }
+      }
+    ],
+    ["athrea'", { "_index": 555, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "athrea](/region/athrea",
+      {
+        "_index": 471,
+        "name": {},
+        "text": {
+          "Region/Ialassa": {},
+          "Region/Lantium": {},
+          "Region/Thyropae": {}
+        }
+      }
+    ],
+    [
+      "atop",
+      {
+        "_index": 357,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "attempt",
+      { "_index": 183, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["away", { "_index": 20, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "back",
+      {
+        "_index": 245,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Natural Phenomena/Tidal": {} }
+      }
+    ],
+    [
+      "backstab",
+      { "_index": 490, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "befor",
+      { "_index": 454, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "began",
+      { "_index": 112, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "begin",
+      {
+        "_index": 394,
+        "name": {},
+        "text": {
+          "Natural Phenomena/The Cycle": {},
+          "Natural Phenomena/Tidal": {}
+        }
+      }
+    ],
+    [
+      "belief",
+      {
+        "_index": 375,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "believ",
+      {
+        "_index": 296,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "best",
+      {
+        "_index": 370,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "bestow",
+      { "_index": 255, "name": {}, "text": { "Divinity/Lacuna": {} } }
+    ],
+    [
+      "better",
+      {
+        "_index": 16,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "between",
+      {
+        "_index": 380,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "bodi",
+      {
+        "_index": 15,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["both", { "_index": 507, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["braid", { "_index": 80, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["break", { "_index": 607, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "bring",
+      { "_index": 235, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "broker'",
+      { "_index": 472, "name": {}, "text": { "Region/Ialassa": {} } }
+    ],
+    ["build", { "_index": 573, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "built",
+      {
+        "_index": 358,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    ["burli", { "_index": 73, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "bygon",
+      {
+        "_index": 366,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["capit", { "_index": 479, "name": {}, "text": { "Region/Thyropae": {} } }],
+    [
+      "capric",
+      { "_index": 209, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "care",
+      {
+        "_index": 48,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/Tidal": {} }
+      }
+    ],
+    [
+      "carv",
+      {
+        "_index": 32,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "cast",
+      {
+        "_index": 312,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "caster",
+      {
+        "_index": 309,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["central", { "_index": 496, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "centuri",
+      {
+        "_index": 393,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "ceremoni",
+      { "_index": 97, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "certain",
+      { "_index": 101, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "champion'",
+      {
+        "_index": 282,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "chang",
+      {
+        "_index": 127,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "channel",
+      {
+        "_index": 274,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "characterist",
+      { "_index": 194, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "children",
+      { "_index": 241, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["citadel", { "_index": 30, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "citi",
+      {
+        "_index": 31,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Ialassa": {},
+          "Region/Lantium": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    ["civil", { "_index": 600, "name": {}, "text": { "Region/Salores": {} } }],
+    ["claim", { "_index": 497, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["clan", { "_index": 100, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "clannish",
+      { "_index": 55, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "clariti",
+      { "_index": 232, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "coast",
+      { "_index": 430, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "coincident",
+      { "_index": 536, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "cold",
+      {
+        "_index": 260,
+        "name": { "Material/Cold Iron": {} },
+        "text": { "Material/Cold Iron": {} }
+      }
+    ],
+    [
+      "colloqui",
+      {
+        "_index": 277,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "color",
+      {
+        "_index": 305,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "combin",
+      { "_index": 459, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "come",
+      {
+        "_index": 96,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Natural Phenomena/The Cycle": {},
+          "Natural Phenomena/Tidal": {}
+        }
+      }
+    ],
+    ["compact", { "_index": 72, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["complet", { "_index": 95, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "concentr",
+      { "_index": 493, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "condit",
+      {
+        "_index": 545,
+        "name": {},
+        "text": { "Region/Athrea": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "consist",
+      {
+        "_index": 379,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "constant",
+      {
+        "_index": 175,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "constantli",
+      { "_index": 506, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "construct",
+      {
+        "_index": 356,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "content",
+      { "_index": 644, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "contin",
+      {
+        "_index": 424,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Tidal": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "continu",
+      { "_index": 248, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "contribut",
+      { "_index": 508, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "control",
+      { "_index": 200, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["conveni", { "_index": 527, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "cool",
+      { "_index": 265, "name": {}, "text": { "Material/Material": {} } }
+    ],
+    [
+      "core",
+      {
+        "_index": 289,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "countri",
+      {
+        "_index": 485,
+        "name": {},
+        "text": { "Region/Athrea": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "country'",
+      { "_index": 579, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "countrysid",
+      {
+        "_index": 363,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["coup", { "_index": 522, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["cow", { "_index": 542, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["crafter", { "_index": 38, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["crash", { "_index": 578, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "creat",
+      {
+        "_index": 159,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Manifestation": {}
+        }
+      }
+    ],
+    [
+      "creation",
+      {
+        "_index": 109,
+        "name": { "Divinity/Creation Myth": {} },
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    [
+      "creativ",
+      { "_index": 614, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "creator",
+      { "_index": 254, "name": {}, "text": { "Divinity/Lacuna": {} } }
+    ],
+    [
+      "creatur",
+      {
+        "_index": 142,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    ["cuisin", { "_index": 612, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "cultur",
+      {
+        "_index": 92,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "current",
+      {
+        "_index": 314,
+        "name": {},
+        "text": {
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "cycl",
+      {
+        "_index": 313,
+        "name": { "Natural Phenomena/The Cycle": {} },
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "danc",
+      { "_index": 173, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "danger",
+      { "_index": 466, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "date",
+      {
+        "_index": 320,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "day",
+      {
+        "_index": 225,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "decay",
+      {
+        "_index": 204,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "deep",
+      {
+        "_index": 13,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "delv",
+      {
+        "_index": 401,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["denizen", { "_index": 543, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["dens", { "_index": 494, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["depth", { "_index": 10, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "deriv",
+      {
+        "_index": 308,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "despit",
+      {
+        "_index": 558,
+        "name": {},
+        "text": { "Region/Athrea": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "devot",
+      { "_index": 252, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "didn't",
+      { "_index": 196, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "differ",
+      {
+        "_index": 178,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "difficult",
+      { "_index": 584, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    ["dig", { "_index": 564, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "dispers",
+      { "_index": 609, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "divin",
+      {
+        "_index": 283,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "doesn’t",
+      { "_index": 432, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "donat",
+      { "_index": 166, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "done",
+      { "_index": 442, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "dot",
+      {
+        "_index": 362,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["dour", { "_index": 36, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "draw",
+      {
+        "_index": 270,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "drive",
+      { "_index": 228, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["driven", { "_index": 604, "name": {}, "text": { "Region/Salores": {} } }],
+    ["duchi", { "_index": 491, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "due",
+      {
+        "_index": 396,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "dwarf",
+      {
+        "_index": 0,
+        "name": { "Ancestry/Dwarf": {} },
+        "text": { "Ancestry/Dwarf": {} }
+      }
+    ],
+    [
+      "dwarf](https://2e.aonprd.com/ancestries.aspx?id=1",
+      { "_index": 107, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    ["dwarv", { "_index": 5, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "each",
+      {
+        "_index": 99,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Divinity/Creation Myth": {} }
+      }
+    ],
+    ["earn", { "_index": 23, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "easili",
+      {
+        "_index": 302,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["east", { "_index": 503, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "eastern",
+      { "_index": 575, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "easternmost",
+      { "_index": 422, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["edg", { "_index": 619, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "effect",
+      {
+        "_index": 276,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "empti",
+      { "_index": 120, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "end",
+      {
+        "_index": 150,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "energi",
+      {
+        "_index": 272,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "engin",
+      {
+        "_index": 416,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["ensconc", { "_index": 28, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "entir",
+      {
+        "_index": 386,
+        "name": {},
+        "text": {
+          "Natural Phenomena/The Cycle": {},
+          "Natural Phenomena/Tidal": {}
+        }
+      }
+    ],
+    ["erod", { "_index": 616, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "essenc",
+      {
+        "_index": 158,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    [
+      "esteem",
+      { "_index": 448, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "estim",
+      {
+        "_index": 317,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "etern",
+      { "_index": 129, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "even",
+      {
+        "_index": 359,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "event",
+      { "_index": 463, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["exacerb", { "_index": 509, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "exampl",
+      {
+        "_index": 294,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "excav",
+      {
+        "_index": 364,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "excit",
+      { "_index": 214, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "exert",
+      { "_index": 213, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "exist",
+      { "_index": 237, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "expans",
+      { "_index": 115, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "experi",
+      { "_index": 223, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["export", { "_index": 638, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "ey",
+      {
+        "_index": 307,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["fall", { "_index": 514, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["fame", { "_index": 480, "name": {}, "text": { "Region/Thyropae": {} } }],
+    ["famili", { "_index": 57, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "far",
+      {
+        "_index": 19,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "faster",
+      {
+        "_index": 413,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["favor", { "_index": 641, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "feel",
+      { "_index": 230, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "fend",
+      {
+        "_index": 352,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["few", { "_index": 581, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "fill",
+      {
+        "_index": 60,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Divinity/Creation Myth": {} }
+      }
+    ],
+    [
+      "final",
+      {
+        "_index": 251,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Natural Phenomena/Tidal": {} }
+      }
+    ],
+    ["find", { "_index": 517, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "first",
+      {
+        "_index": 335,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["fish", { "_index": 596, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "fixiti",
+      { "_index": 147, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "flaw",
+      { "_index": 163, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "float",
+      {
+        "_index": 118,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "floodwat",
+      { "_index": 455, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["flux", { "_index": 511, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "follow",
+      { "_index": 233, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["food", { "_index": 583, "name": {}, "text": { "Region/Salores": {} } }],
+    ["foot", { "_index": 69, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "forc",
+      {
+        "_index": 215,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Salores": {} }
+      }
+    ],
+    ["forest", { "_index": 495, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "form",
+      {
+        "_index": 298,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/Tidal": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "found",
+      {
+        "_index": 343,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    ["frame", { "_index": 74, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "frequenc",
+      { "_index": 462, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "frequent",
+      { "_index": 554, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    ["friend", { "_index": 56, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "front",
+      { "_index": 453, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["further", { "_index": 500, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "gave",
+      {
+        "_index": 198,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    ["gender", { "_index": 75, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "gener",
+      {
+        "_index": 342,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "generos",
+      { "_index": 250, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["gift", { "_index": 256, "name": {}, "text": { "Divinity/Lacuna": {} } }],
+    ["give", { "_index": 567, "name": {}, "text": { "Region/Salores": {} } }],
+    ["given", { "_index": 618, "name": {}, "text": { "Region/Salores": {} } }],
+    ["globe", { "_index": 577, "name": {}, "text": { "Region/Salores": {} } }],
+    ["gotten", { "_index": 613, "name": {}, "text": { "Region/Salores": {} } }],
+    ["govern", { "_index": 524, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "grassland",
+      { "_index": 498, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    ["great", { "_index": 602, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "greatest",
+      {
+        "_index": 287,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["grip", { "_index": 637, "name": {}, "text": { "Region/Salores": {} } }],
+    ["ground", { "_index": 566, "name": {}, "text": { "Region/Salores": {} } }],
+    ["grow", { "_index": 591, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "gunpowd",
+      { "_index": 630, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "gunpowder([material](/material/materi",
+      { "_index": 629, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    ["hair", { "_index": 79, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["halid", { "_index": 474, "name": {}, "text": { "Region/Ialassa": {} } }],
+    ["hall", { "_index": 59, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["hammer", { "_index": 63, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "happen",
+      {
+        "_index": 134,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Natural Phenomena/Tidal": {} }
+      }
+    ],
+    [
+      "happili",
+      { "_index": 170, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "hard",
+      {
+        "_index": 327,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["hardi", { "_index": 588, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "harsh",
+      { "_index": 451, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["heel", { "_index": 565, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "held",
+      {
+        "_index": 446,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Athrea": {} }
+      }
+    ],
+    ["here", { "_index": 475, "name": {}, "text": { "Region/Ialassa": {} } }],
+    [
+      "high",
+      {
+        "_index": 420,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "historian",
+      {
+        "_index": 316,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["hit", { "_index": 64, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "hold",
+      { "_index": 153, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["home", { "_index": 8, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "hope",
+      {
+        "_index": 403,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["hous", { "_index": 520, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["human", { "_index": 6, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "humorless",
+      { "_index": 37, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "hundr",
+      {
+        "_index": 347,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "hunt",
+      {
+        "_index": 399,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "ialassa",
+      {
+        "_index": 470,
+        "name": { "Region/Ialassa": {} },
+        "text": { "Region/Ialassa": {} }
+      }
+    ],
+    [
+      "ialassa](/region/ialassa",
+      { "_index": 534, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "ilkyn",
+      {
+        "_index": 169,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    [
+      "illyara",
+      {
+        "_index": 407,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "imbu",
+      { "_index": 156, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "impli",
+      {
+        "_index": 346,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["import", { "_index": 627, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "indivdu",
+      { "_index": 211, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "inert",
+      { "_index": 113, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "infinit",
+      { "_index": 122, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "initi",
+      { "_index": 246, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "inland",
+      { "_index": 456, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "innov",
+      {
+        "_index": 412,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "inscript",
+      {
+        "_index": 383,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["inspir", { "_index": 551, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "instead",
+      {
+        "_index": 530,
+        "name": {},
+        "text": { "Region/Athrea": {}, "Region/Salores": {} }
+      }
+    ],
+    ["intern", { "_index": 521, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "interv",
+      { "_index": 434, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["intric", { "_index": 81, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["invent", { "_index": 628, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "inventor",
+      { "_index": 621, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "iron",
+      {
+        "_index": 261,
+        "name": { "Material/Cold Iron": {} },
+        "text": { "Region/Salores": {} }
+      }
+    ],
+    [
+      "it'",
+      {
+        "_index": 295,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Ialassa": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "it’",
+      { "_index": 435, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "job",
+      { "_index": 440, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "junctur",
+      { "_index": 206, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "keep",
+      {
+        "_index": 361,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "ki",
+      {
+        "_index": 281,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "kind",
+      {
+        "_index": 139,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    ["knee", { "_index": 586, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "know",
+      { "_index": 267, "name": {}, "text": { "Material/Material": {} } }
+    ],
+    [
+      "known",
+      {
+        "_index": 278,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {}, "Region/Ialassa": {} }
+      }
+    ],
+    [
+      "lacuna",
+      {
+        "_index": 148,
+        "name": { "Divinity/Lacuna": {} },
+        "text": { "Divinity/Creation Myth": {} }
+      }
+    ],
+    [
+      "lacuna'",
+      { "_index": 182, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "lacuna](/divinity/lacuna",
+      { "_index": 138, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["land", { "_index": 568, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "lantium",
+      {
+        "_index": 476,
+        "name": { "Region/Lantium": {} },
+        "text": { "Region/Lantium": {} }
+      }
+    ],
+    [
+      "lantium](/region/lantium",
+      { "_index": 535, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "larg",
+      {
+        "_index": 389,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "last",
+      { "_index": 238, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "laughter",
+      { "_index": 62, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "layer",
+      {
+        "_index": 369,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "learn",
+      {
+        "_index": 351,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["length", { "_index": 78, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["less", { "_index": 484, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "life",
+      {
+        "_index": 239,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Divinity/Lacuna": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "liken",
+      {
+        "_index": 336,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["littl", { "_index": 571, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "live",
+      {
+        "_index": 18,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Creation Myth": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "livestock",
+      { "_index": 585, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "locat",
+      {
+        "_index": 438,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "lone",
+      {
+        "_index": 141,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    [
+      "lonesom",
+      { "_index": 165, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "long",
+      {
+        "_index": 123,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    ["longest", { "_index": 538, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "made",
+      {
+        "_index": 7,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Divinity/Creation Myth": {} }
+      }
+    ],
+    [
+      "magic",
+      {
+        "_index": 279,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "magic'",
+      {
+        "_index": 397,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["major", { "_index": 477, "name": {}, "text": { "Region/Lantium": {} } }],
+    [
+      "make",
+      {
+        "_index": 326,
+        "name": {},
+        "text": {
+          "Natural Phenomena/The Cycle": {},
+          "Natural Phenomena/Tidal": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "mani",
+      {
+        "_index": 128,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "manifest",
+      {
+        "_index": 268,
+        "name": { "Natural Phenomena/Manifestation": {} },
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "maritim",
+      { "_index": 481, "name": {}, "text": { "Region/Thyropae": {} } }
+    ],
+    ["marsh", { "_index": 570, "name": {}, "text": { "Region/Salores": {} } }],
+    ["mass", { "_index": 487, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["massiv", { "_index": 606, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "materi",
+      {
+        "_index": 264,
+        "name": { "Material/Material": {} },
+        "text": { "Material/Material": {} }
+      }
+    ],
+    ["mean", { "_index": 523, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "merchant",
+      { "_index": 547, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "metal",
+      {
+        "_index": 40,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "middl",
+      { "_index": 192, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "mile",
+      {
+        "_index": 419,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "modern",
+      {
+        "_index": 319,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "moment",
+      { "_index": 231, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "monk'",
+      {
+        "_index": 280,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "monthli",
+      { "_index": 461, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "more",
+      {
+        "_index": 49,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Manifestation": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    ["moss", { "_index": 589, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "mountain",
+      { "_index": 502, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "move",
+      {
+        "_index": 125,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "multipl",
+      {
+        "_index": 377,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "myth",
+      {
+        "_index": 110,
+        "name": { "Divinity/Creation Myth": {} },
+        "text": { "Divinity/Lacuna": {} }
+      }
+    ],
+    [
+      "myth](/divinity/cr",
+      { "_index": 259, "name": {}, "text": { "Divinity/Lacuna": {} } }
+    ],
+    ["name", { "_index": 529, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "natur",
+      {
+        "_index": 345,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    ["near", { "_index": 510, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "need",
+      {
+        "_index": 234,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Salores": {} }
+      }
+    ],
+    ["negoti", { "_index": 640, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "neighbor",
+      { "_index": 645, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "never",
+      { "_index": 229, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "new",
+      {
+        "_index": 193,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "next",
+      {
+        "_index": 395,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["nexu", { "_index": 505, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["nobl", { "_index": 516, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "non",
+      {
+        "_index": 373,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "noth",
+      { "_index": 126, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "now",
+      { "_index": 240, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "observ",
+      { "_index": 437, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "occup",
+      { "_index": 445, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["occur", { "_index": 553, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "ocean",
+      { "_index": 426, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "offer",
+      { "_index": 224, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "old",
+      {
+        "_index": 104,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "older",
+      {
+        "_index": 324,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "on",
+      {
+        "_index": 143,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Ialassa": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    ["onto", { "_index": 537, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["oper", { "_index": 473, "name": {}, "text": { "Region/Ialassa": {} } }],
+    ["oppon", { "_index": 632, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "orbit",
+      {
+        "_index": 174,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Manifestation": {}
+        }
+      }
+    ],
+    [
+      "origin",
+      { "_index": 253, "name": {}, "text": { "Divinity/Lacuna": {} } }
+    ],
+    [
+      "other",
+      { "_index": 195, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "otherwis",
+      { "_index": 119, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "out",
+      {
+        "_index": 188,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Tidal": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    ["over", { "_index": 631, "name": {}, "text": { "Region/Salores": {} } }],
+    ["pace", { "_index": 624, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "part",
+      {
+        "_index": 423,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "particul",
+      { "_index": 117, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "pass",
+      { "_index": 131, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "past",
+      {
+        "_index": 402,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["pattern", { "_index": 82, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "peopl",
+      {
+        "_index": 27,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Region/Salores": {} }
+      }
+    ],
+    ["perhap", { "_index": 559, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "period",
+      {
+        "_index": 374,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "perman",
+      {
+        "_index": 299,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "phenomena/tid",
+      { "_index": 594, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "physic",
+      {
+        "_index": 85,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Region/Athrea": {} }
+      }
+    ],
+    ["place", { "_index": 93, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "planet",
+      {
+        "_index": 160,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Manifestation": {}
+        }
+      }
+    ],
+    ["plant", { "_index": 611, "name": {}, "text": { "Region/Salores": {} } }],
+    ["play", { "_index": 105, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["pli", { "_index": 548, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["point", { "_index": 643, "name": {}, "text": { "Region/Salores": {} } }],
+    ["poorli", { "_index": 598, "name": {}, "text": { "Region/Salores": {} } }],
+    ["populac", { "_index": 492, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "possess",
+      { "_index": 197, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "possibl",
+      {
+        "_index": 414,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "potenc",
+      {
+        "_index": 311,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "potent",
+      {
+        "_index": 297,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "power",
+      {
+        "_index": 186,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "powerhous",
+      { "_index": 557, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "practic",
+      { "_index": 177, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "preced",
+      { "_index": 450, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "predict",
+      {
+        "_index": 176,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Natural Phenomena/Tidal": {} }
+      }
+    ],
+    ["premier", { "_index": 556, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "preval",
+      {
+        "_index": 293,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "previou",
+      {
+        "_index": 410,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    ["pride", { "_index": 76, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "progress",
+      { "_index": 207, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "prohibit",
+      { "_index": 595, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "proposit",
+      { "_index": 467, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "prosper",
+      {
+        "_index": 331,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "provid",
+      {
+        "_index": 210,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Region/Salores": {} }
+      }
+    ],
+    ["proxim", { "_index": 12, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["put", { "_index": 622, "name": {}, "text": { "Region/Salores": {} } }],
+    ["qualiti", { "_index": 50, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "quantiti",
+      {
+        "_index": 51,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "quickli",
+      { "_index": 164, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["rapidli", { "_index": 515, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["reach", { "_index": 84, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "reagent",
+      {
+        "_index": 286,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "realm",
+      {
+        "_index": 187,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Divinity/Lacuna": {},
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/Tidal": {}
+        }
+      }
+    ],
+    [
+      "reced",
+      { "_index": 457, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "reclaim",
+      {
+        "_index": 344,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["record", { "_index": 623, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "red",
+      { "_index": 116, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["refer", { "_index": 528, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["regard", { "_index": 549, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "region",
+      {
+        "_index": 408,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "regular",
+      { "_index": 433, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["relic", { "_index": 617, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "remain",
+      {
+        "_index": 384,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "remedi",
+      { "_index": 184, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "repeat",
+      {
+        "_index": 330,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["reput", { "_index": 24, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "reset",
+      {
+        "_index": 355,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "resili",
+      {
+        "_index": 398,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["result", { "_index": 562, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "retriev",
+      {
+        "_index": 404,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "revel",
+      { "_index": 220, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "revers",
+      {
+        "_index": 415,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "rich",
+      {
+        "_index": 400,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "right",
+      { "_index": 449, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "ring",
+      {
+        "_index": 304,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["rise", { "_index": 513, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["rival", { "_index": 512, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["rock", { "_index": 34, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["roil", { "_index": 486, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "ruin",
+      {
+        "_index": 325,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "rule",
+      {
+        "_index": 468,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Athrea": {} }
+      }
+    ],
+    ["ruler", { "_index": 525, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "ruleset",
+      { "_index": 108, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "sail",
+      { "_index": 464, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "salor",
+      {
+        "_index": 561,
+        "name": { "Region/Salores": {} },
+        "text": { "Region/Salores": {} }
+      }
+    ],
+    [
+      "saloren",
+      { "_index": 601, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "salores](/region/salor",
+      { "_index": 431, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["salti", { "_index": 592, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "saltpet",
+      { "_index": 634, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "saltwat",
+      { "_index": 569, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "same",
+      {
+        "_index": 376,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "sat",
+      { "_index": 219, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "saw",
+      {
+        "_index": 162,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "sclera",
+      {
+        "_index": 306,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "sculpt",
+      { "_index": 155, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["seawe", { "_index": 590, "name": {}, "text": { "Region/Salores": {} } }],
+    ["see", { "_index": 35, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["seem", { "_index": 53, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "sentienc",
+      {
+        "_index": 339,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "sentient",
+      {
+        "_index": 243,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "sever",
+      { "_index": 458, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["shift", { "_index": 488, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["shore", { "_index": 580, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "short",
+      {
+        "_index": 66,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Region/Athrea": {} }
+      }
+    ],
+    ["shorter", { "_index": 70, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "sibl",
+      { "_index": 168, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["side", { "_index": 576, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "situat",
+      { "_index": 185, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "slam",
+      { "_index": 428, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "sliver",
+      { "_index": 157, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "slumber",
+      {
+        "_index": 338,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "smite",
+      {
+        "_index": 284,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["solid", { "_index": 33, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "solitud",
+      { "_index": 151, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "sought",
+      { "_index": 149, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["sound", { "_index": 61, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "sourc",
+      {
+        "_index": 273,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "space",
+      { "_index": 121, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "spark",
+      { "_index": 247, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["spear", { "_index": 519, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "spell",
+      {
+        "_index": 291,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "spellcast",
+      {
+        "_index": 292,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["spent", { "_index": 42, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "sphere",
+      {
+        "_index": 288,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["spike", { "_index": 608, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "spin",
+      { "_index": 161, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "spirit",
+      { "_index": 133, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "spot",
+      {
+        "_index": 303,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "sprang",
+      { "_index": 181, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "spread",
+      {
+        "_index": 350,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "stabil",
+      { "_index": 130, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["stabl", { "_index": 572, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "stagnant",
+      { "_index": 136, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["stand", { "_index": 68, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "starstuff",
+      { "_index": 154, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "state",
+      {
+        "_index": 323,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "stay",
+      { "_index": 124, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["stern", { "_index": 26, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "still",
+      { "_index": 179, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["stilt", { "_index": 603, "name": {}, "text": { "Region/Salores": {} } }],
+    ["stocki", { "_index": 67, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["stoic", { "_index": 25, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["stone", { "_index": 39, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["stori", { "_index": 257, "name": {}, "text": { "Divinity/Lacuna": {} } }],
+    [
+      "storm",
+      {
+        "_index": 452,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "stranger",
+      { "_index": 52, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "strive",
+      { "_index": 222, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "strongest",
+      { "_index": 532, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "struck",
+      {
+        "_index": 340,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "structur",
+      {
+        "_index": 388,
+        "name": {},
+        "text": {
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "stubborn",
+      { "_index": 563, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "stuff",
+      { "_index": 262, "name": {}, "text": { "Material/Cold Iron": {} } }
+    ],
+    [
+      "stupor",
+      {
+        "_index": 341,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "substanc",
+      { "_index": 639, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "subterranean",
+      { "_index": 9, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "succeed",
+      { "_index": 226, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "successor",
+      { "_index": 236, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "such",
+      {
+        "_index": 201,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    ["suit", { "_index": 599, "name": {}, "text": { "Region/Salores": {} } }],
+    ["sulfur", { "_index": 633, "name": {}, "text": { "Region/Salores": {} } }],
+    ["sunnok'", { "_index": 504, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "supervis",
+      {
+        "_index": 349,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "sure",
+      {
+        "_index": 328,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["surfac", { "_index": 21, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "surviv",
+      {
+        "_index": 385,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "symptom",
+      {
+        "_index": 378,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "system",
+      {
+        "_index": 368,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "taboo",
+      {
+        "_index": 290,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "techniqu",
+      {
+        "_index": 321,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "technolog",
+      {
+        "_index": 417,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "tecton",
+      { "_index": 439, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "tell",
+      {
+        "_index": 372,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["test", { "_index": 2, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["test2", { "_index": 3, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["test3", { "_index": 4, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "themselv",
+      {
+        "_index": 77,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "there'r",
+      {
+        "_index": 392,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "thick",
+      {
+        "_index": 310,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    ["think", { "_index": 539, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "those",
+      {
+        "_index": 41,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Creation Myth": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    ["though", { "_index": 90, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["threat", { "_index": 540, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "three",
+      {
+        "_index": 531,
+        "name": {},
+        "text": { "Region/Athrea": {}, "Region/Salores": {} }
+      }
+    ],
+    ["thrive", { "_index": 546, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "through",
+      {
+        "_index": 275,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Manifestation": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "throughout",
+      {
+        "_index": 242,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Athrea": {}
+        }
+      }
+    ],
+    [
+      "thyropa",
+      {
+        "_index": 478,
+        "name": { "Region/Thyropae": {} },
+        "text": { "Region/Thyropae": {} }
+      }
+    ],
+    [
+      "thyropae](/region/thyropa",
+      { "_index": 533, "name": {}, "text": { "Region/Athrea": {} } }
+    ],
+    [
+      "tidal",
+      {
+        "_index": 418,
+        "name": { "Natural Phenomena/Tidal": {} },
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "tidal](/natur",
+      { "_index": 593, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "time",
+      {
+        "_index": 43,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "today",
+      { "_index": 249, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["told", { "_index": 258, "name": {}, "text": { "Divinity/Lacuna": {} } }],
+    [
+      "took",
+      { "_index": 152, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "tool",
+      {
+        "_index": 409,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "total",
+      { "_index": 190, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "trace",
+      { "_index": 244, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "trade",
+      {
+        "_index": 482,
+        "name": {},
+        "text": {
+          "Region/Thyropae": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "traditionalist",
+      { "_index": 91, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "transform",
+      { "_index": 14, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "travel",
+      {
+        "_index": 425,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "triptych",
+      { "_index": 635, "name": {}, "text": { "Region/Salores": {} } }
+    ],
+    [
+      "true",
+      { "_index": 227, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "trust",
+      {
+        "_index": 371,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["tumultu", { "_index": 552, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "tunnel",
+      {
+        "_index": 367,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["turmoil", { "_index": 560, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "twelv",
+      {
+        "_index": 189,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Divinity/Lacuna": {},
+          "Natural Phenomena/Manifestation": {}
+        }
+      }
+    ],
+    [
+      "twice",
+      { "_index": 460, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "twin",
+      { "_index": 191, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "two",
+      { "_index": 172, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["typic", { "_index": 83, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "unaffect",
+      {
+        "_index": 387,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["unbridl", { "_index": 45, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "uncov",
+      {
+        "_index": 365,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["under", { "_index": 544, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "undergo",
+      {
+        "_index": 354,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "understand",
+      { "_index": 44, "name": {}, "text": { "Ancestry/Dwarf": {} } }
+    ],
+    [
+      "unfeel",
+      { "_index": 146, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "uniform",
+      {
+        "_index": 114,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "uniqu",
+      {
+        "_index": 98,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Divinity/Creation Myth": {} }
+      }
+    ],
+    [
+      "unpredict",
+      { "_index": 216, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "until",
+      { "_index": 427, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["untrust", { "_index": 54, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    ["up", { "_index": 626, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "upon",
+      {
+        "_index": 135,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Divinity/Lacuna": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "us",
+      {
+        "_index": 106,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "user",
+      {
+        "_index": 301,
+        "name": {},
+        "text": { "Natural Phenomena/Manifestation": {} }
+      }
+    ],
+    [
+      "usual",
+      { "_index": 441, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "vallastela",
+      { "_index": 444, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    ["valu", { "_index": 94, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "vanish",
+      {
+        "_index": 381,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "veri",
+      {
+        "_index": 447,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "virtuou",
+      {
+        "_index": 140,
+        "name": {},
+        "text": { "Divinity/Creation Myth": {}, "Divinity/Lacuna": {} }
+      }
+    ],
+    [
+      "void",
+      { "_index": 145, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "wake",
+      {
+        "_index": 337,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "wander",
+      { "_index": 132, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "wane",
+      { "_index": 203, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["war", { "_index": 541, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["warm", { "_index": 58, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "wast",
+      { "_index": 137, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "watch",
+      { "_index": 171, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["water", { "_index": 587, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "wave",
+      {
+        "_index": 421,
+        "name": {},
+        "text": { "Natural Phenomena/Tidal": {}, "Region/Salores": {} }
+      }
+    ],
+    [
+      "waveread",
+      { "_index": 443, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "wax",
+      { "_index": 202, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "way",
+      {
+        "_index": 218,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "weaponri",
+      {
+        "_index": 406,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    [
+      "wear",
+      {
+        "_index": 391,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["week", { "_index": 582, "name": {}, "text": { "Region/Salores": {} } }],
+    [
+      "weight",
+      { "_index": 205, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "well",
+      {
+        "_index": 22,
+        "name": {},
+        "text": {
+          "Ancestry/Dwarf": {},
+          "Divinity/Lacuna": {},
+          "Natural Phenomena/Tidal": {}
+        }
+      }
+    ],
+    [
+      "weren't",
+      {
+        "_index": 353,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["west", { "_index": 501, "name": {}, "text": { "Region/Athrea": {} } }],
+    [
+      "western",
+      {
+        "_index": 465,
+        "name": {},
+        "text": {
+          "Natural Phenomena/Tidal": {},
+          "Region/Athrea": {},
+          "Region/Salores": {}
+        }
+      }
+    ],
+    [
+      "westernmost",
+      { "_index": 429, "name": {}, "text": { "Natural Phenomena/Tidal": {} } }
+    ],
+    [
+      "whenc",
+      { "_index": 180, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "whole",
+      {
+        "_index": 411,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["wide", { "_index": 71, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "wisdom",
+      { "_index": 208, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "wish",
+      { "_index": 144, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    [
+      "wit",
+      {
+        "_index": 333,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["within", { "_index": 29, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "without",
+      {
+        "_index": 348,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {}, "Region/Athrea": {} }
+      }
+    ],
+    [
+      "wondrou",
+      { "_index": 217, "name": {}, "text": { "Divinity/Creation Myth": {} } }
+    ],
+    ["work", { "_index": 47, "name": {}, "text": { "Ancestry/Dwarf": {} } }],
+    [
+      "world",
+      {
+        "_index": 111,
+        "name": {},
+        "text": {
+          "Divinity/Creation Myth": {},
+          "Natural Phenomena/The Cycle": {}
+        }
+      }
+    ],
+    [
+      "write",
+      {
+        "_index": 382,
+        "name": {},
+        "text": { "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["wrong", { "_index": 518, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["ya", { "_index": 266, "name": {}, "text": { "Material/Material": {} } }],
+    [
+      "year",
+      {
+        "_index": 103,
+        "name": {},
+        "text": { "Ancestry/Dwarf": {}, "Natural Phenomena/The Cycle": {} }
+      }
+    ],
+    ["yo", { "_index": 263, "name": {}, "text": { "Material/Cold Iron": {} } }],
+    ["young", { "_index": 526, "name": {}, "text": { "Region/Athrea": {} } }],
+    ["zeal", { "_index": 46, "name": {}, "text": { "Ancestry/Dwarf": {} } }]
+  ],
+  "pipeline": ["stemmer"]
+}

@@ -1,8 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import {
+  faAngleDown,
+  faAngleRight,
+  faMinus,
+} from '@fortawesome/free-solid-svg-icons';
 import { urllize } from '../src/document';
 import { useLocalStorage } from '../src/local_storage';
 import { DocumentHierarchy } from '../src/markdown';
+import { Transition } from '@headlessui/react';
+import Link from 'next/link';
 
 function color(idx: number) {
   return ['#CA9703', '#D5AD36', '#4488BF', '#265999'][idx % 4];
@@ -65,7 +71,7 @@ export default function Tree({
           icon={toggled ? faAngleDown : faAngleRight}
         />
       ) : (
-        <></>
+        <FontAwesomeIcon className="mr-1 w-[12px]" icon={faMinus} />
       )}
       <span>
         {tree.kind === 'branch' ? (
@@ -73,33 +79,42 @@ export default function Tree({
             {tree.name}
           </span>
         ) : (
-          <a
-            className={[
-              'small-caps font-roboto',
-              selected === tree.name
-                ? 'text-background-400 bg-crimson-500 rounded px-0.5'
-                : 'text-crimson-500',
-            ].join(' ')}
-            href={`/${urllize(tree.kind)}/${urllize(tree.name)}`}
-          >
-            {tree.name}
-          </a>
+          <Link href={`/${urllize(tree.kind)}/${urllize(tree.name)}`}>
+            <a
+              className={[
+                'small-caps font-roboto',
+                selected === tree.name
+                  ? 'text-background-400 bg-crimson-500 rounded px-0.5'
+                  : 'text-crimson-500',
+              ].join(' ')}
+            >
+              {tree.name}
+            </a>
+          </Link>
         )}
       </span>
       <br />
-      {toggled ? (
-        tree.children.map((tree) => (
-          <Tree
-            key={tree.name}
-            tree={tree}
-            level={curLevel + 1}
-            kind={kind}
-            selected={selected}
-          />
-        ))
-      ) : (
-        <></>
-      )}
+      <Transition
+        show={!!toggled}
+        enter="transform transition ease-in duration-200"
+        enterFrom="opacity-0 scale-95"
+        enterTo="opacity-100 scale-100"
+        leave="transform duration-200 transition ease-in"
+        leaveFrom="opacity-100 scale-100 "
+        leaveTo="opacity-0 scale-95"
+      >
+        <>
+          {tree.children.map((tree) => (
+            <Tree
+              key={tree.name}
+              tree={tree}
+              level={curLevel + 1}
+              kind={kind}
+              selected={selected}
+            />
+          ))}
+        </>
+      </Transition>
     </div>
   );
 }

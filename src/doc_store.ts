@@ -4,11 +4,10 @@ import { Config } from './config';
 import { Document, Section, urllize } from './document';
 
 import md from 'markdown-it';
-import mdcontainer from '@gerhobbelt/markdown-it-container';
-import mdtable from 'markdown-it-multimd-table';
 import { WritableDraft } from 'immer/dist/internal';
 
 export type FinalizedDocument = {
+  id: string;
   config: Config;
   text: Section[];
   linked: { kind: string; name: string }[];
@@ -34,6 +33,7 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
 
   const inter = produce(documents as FinalizedDocument[], (documentDraft) => {
     for (const document of documentDraft) {
+      document.id = `${document.kind}/${document.name}`;
       let linkedDocs: { kind: string; name: string }[] = [];
 
       replacers: for (const [re, linkedDoc] of replacers) {
@@ -131,9 +131,7 @@ const markdown = md({
   linkify: true,
   typographer: true,
   breaks: true,
-})
-  .use(mdcontainer)
-  .use(mdtable);
+});
 
 export function renderDoc(document: FinalizedDocument): Section[] {
   return produce(document.text, (draft) => {

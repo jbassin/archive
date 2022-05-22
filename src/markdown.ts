@@ -1,5 +1,5 @@
 import { readdir, readFile, stat } from 'fs/promises';
-import * as root from 'app-root-path';
+import root from 'app-root-path';
 import { parseDocument, Document } from './document';
 import { FinalizedDocument, linkDocuments } from './doc_store';
 import produce, { current } from 'immer';

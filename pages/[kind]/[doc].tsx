@@ -7,6 +7,8 @@ import { FinalizedDocument, renderDoc } from '../../src/doc_store';
 import { Interweave, Node } from 'interweave';
 import { polyfill } from 'interweave-ssr';
 import Tree from '../../components/tree';
+import Search from '../../components/search';
+import Link from 'next/link';
 
 polyfill();
 
@@ -64,12 +66,11 @@ function transform(node: HTMLElement, children: Node[]): React.ReactNode {
 
   if (node.tagName === 'a') {
     return (
-      <a
-        href={node.getAttribute('href') ?? undefined}
-        className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double"
-      >
-        {children}
-      </a>
+      <Link href={node.getAttribute('href') ?? ''}>
+        <a className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double">
+          {children}
+        </a>
+      </Link>
     );
   }
 }
@@ -97,29 +98,30 @@ const Doc: NextPage<{
 }> = ({ document, tree }) => {
   return (
     <div className="container mx-auto mt-6">
-      <div className="mt-6">
-        <h1 className="text-2xl text-crimson-500 font-eczar">
-          archive.
-          <span className="text-lg text-slate-500 font-tauri pl-2">
-            {subheading(document.kind)}
-          </span>
-        </h1>
-      </div>
-      <div className="hidden md:block relative h-32 overflow-hidden rounded">
-        <img
-          src="https://i.imgur.com/OpyUXz1.png"
-          alt=""
-          style={{
-            width: '100%',
-          }}
-          className="absolute"
-        />
+      <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row items-center mt-6 mb-1">
+          <h1 className="text-2xl text-crimson-500 font-eczar">
+            archive.
+            <span className="text-lg text-slate-500 font-tauri pl-2">
+              {subheading(document.kind)}
+            </span>
+          </h1>
+          <div className="flex-grow" />
+          <Search className="z-10 w-full md:w-2/5" />
+        </div>
+        <div className="hidden md:block relative h-32 overflow-hidden rounded">
+          <img
+            src="https://i.imgur.com/OpyUXz1.png"
+            alt=""
+            className="absolute w-full"
+          />
+        </div>
       </div>
       <div className="mt-4 flex flex-row">
-        <div className="basis-1/5 lg:basis-1/6">
+        <div className="hidden md:block md:basis-1/5 lg:basis-1/6">
           <Tree tree={tree} kind={document.kind} selected={document.name} />
         </div>
-        <div className="basis-4/5 lg:basis-5/6">
+        <div className="md:basis-4/5 lg:basis-5/6">
           <h2 className="font-eczar text-xl text-crimson-500">
             {document.name}{' '}
             {document.config.ipa ? (
@@ -131,7 +133,7 @@ const Doc: NextPage<{
             )}
           </h2>
           <div className="flex flex-row">
-            <div className="basis-5/6 font-gelasio">
+            <div className="lg:basis-5/6 font-gelasio">
               {renderDoc(document).map((section, idx) => {
                 switch (section.columns) {
                   case 1: {
@@ -163,15 +165,6 @@ const Doc: NextPage<{
                   }
                 }
               })}
-            </div>
-            <div className="basis-1/6">
-              {document.config.img ? (
-                <>
-                  <img src={document.config.img} alt="" />
-                </>
-              ) : (
-                <></>
-              )}
             </div>
           </div>
           {document.linked.length > 0 ? (
