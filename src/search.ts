@@ -11,7 +11,7 @@ export async function buildIndex(): Promise<Index> {
 
   const index = lunr(function () {
     this.ref('id');
-    this.field('name');
+    this.field('name', { boost: 10 });
     this.field('text', {
       extractor: (doc: object) => {
         return pipe(

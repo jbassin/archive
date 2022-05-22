@@ -2,7 +2,7 @@
   "version": "2.3.9",
   "fields": ["name", "text"],
   "fieldVectors": [
-    ["name/Ancestry/Dwarf", [0, 1.822]],
+    ["name/Ancestry/Dwarf", [0, 18.222]],
     [
       "text/Ancestry/Dwarf",
       [
@@ -25,7 +25,7 @@
         1.379, 105, 1.788, 106, 1.379, 107, 1.788, 108, 1.788
       ]
     ],
-    ["name/Divinity/Creation Myth", [109, 1.066, 110, 1.325]],
+    ["name/Divinity/Creation Myth", [109, 10.664, 110, 13.252]],
     [
       "text/Divinity/Creation Myth",
       [
@@ -57,7 +57,7 @@
         250, 1.245, 251, 0.96, 252, 1.245
       ]
     ],
-    ["name/Divinity/Lacuna", [148, 1.822]],
+    ["name/Divinity/Lacuna", [148, 18.222]],
     [
       "text/Divinity/Lacuna",
       [
@@ -67,14 +67,14 @@
         256, 3.149, 257, 3.149, 258, 3.149, 259, 3.149
       ]
     ],
-    ["name/Material/Cold Iron", [260, 1.325, 261, 1.325]],
+    ["name/Material/Cold Iron", [260, 13.252, 261, 13.252]],
     ["text/Material/Cold Iron", [260, 2.841, 262, 3.684, 263, 3.684]],
-    ["name/Material/Material", [264, 1.822]],
+    ["name/Material/Material", [264, 18.222]],
     [
       "text/Material/Material",
       [264, 2.817, 265, 3.653, 266, 3.653, 267, 3.653]
     ],
-    ["name/Natural Phenomena/Manifestation", [268, 1.822]],
+    ["name/Natural Phenomena/Manifestation", [268, 18.222]],
     [
       "text/Natural Phenomena/Manifestation",
       [
@@ -90,7 +90,7 @@
         2.349, 311, 2.349, 312, 2.349
       ]
     ],
-    ["name/Natural Phenomena/The Cycle", [313, 1.466]],
+    ["name/Natural Phenomena/The Cycle", [313, 14.663]],
     [
       "text/Natural Phenomena/The Cycle",
       [
@@ -119,7 +119,7 @@
         1.493, 416, 1.493, 417, 1.151
       ]
     ],
-    ["name/Natural Phenomena/Tidal", [418, 1.466]],
+    ["name/Natural Phenomena/Tidal", [418, 14.663]],
     [
       "text/Natural Phenomena/Tidal",
       [
@@ -137,7 +137,7 @@
         1.719, 469, 2.228
       ]
     ],
-    ["name/Region/Ialassa", [470, 1.822]],
+    ["name/Region/Ialassa", [470, 18.222]],
     [
       "text/Region/Ialassa",
       [
@@ -145,14 +145,14 @@
         471, 2.141, 472, 3.45, 473, 3.45, 474, 3.45, 475, 3.45
       ]
     ],
-    ["name/Region/Lantium", [476, 1.822]],
+    ["name/Region/Lantium", [476, 18.222]],
     ["text/Region/Lantium", [31, 1.255, 471, 2.267, 476, 2.817, 477, 3.653]],
-    ["name/Region/Thyropae", [478, 1.822]],
+    ["name/Region/Thyropae", [478, 18.222]],
     [
       "text/Region/Thyropae",
       [471, 2.23, 478, 2.771, 479, 3.592, 480, 3.592, 481, 3.592, 482, 2.23]
     ],
-    ["name/Region/Athrea", [483, 1.822]],
+    ["name/Region/Athrea", [483, 18.222]],
     [
       "text/Region/Athrea",
       [
@@ -177,7 +177,7 @@
         1.773, 560, 1.773
       ]
     ],
-    ["name/Region/Salores", [561, 1.822]],
+    ["name/Region/Salores", [561, 18.222]],
     [
       "text/Region/Salores",
       [
