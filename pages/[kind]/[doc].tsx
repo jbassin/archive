@@ -1,7 +1,17 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { DocumentHierarchy, getData, getTree } from '../../src/markdown';
 import { Document, urllize } from '../../src/document';
-import { filter, head, pipe, reduce } from 'ramda';
+import {
+  filter,
+  groupBy,
+  head,
+  map,
+  pipe,
+  prop,
+  reduce,
+  sortBy,
+  toPairs,
+} from 'ramda';
 import produce from 'immer';
 import { FinalizedDocument, renderDoc } from '../../src/doc_store';
 import { Interweave, Node } from 'interweave';
@@ -45,12 +55,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 function transform(node: HTMLElement, children: Node[]): React.ReactNode {
-  if (node.tagName === 'h2') {
-    return <h1 className="text-red-500">{children}</h1>;
-  }
-
   if (node.tagName === 'h3') {
-    return <h1 className="text-8xl font-changa text-blue-500">{children}</h1>;
+    return <h1 className="text-md font-tauri text-crimson-500">{children}</h1>;
   }
 
   if (node.tagName === 'ol') {
@@ -74,6 +80,32 @@ function transform(node: HTMLElement, children: Node[]): React.ReactNode {
       </Link>
     );
   }
+
+  if (node.tagName === 'dl') {
+    return <div>{children}</div>;
+  }
+
+  if (node.tagName === 'dt') {
+    return <span className="font-black small-caps">{children}</span>;
+  }
+
+  if (node.tagName === 'dd') {
+    return (
+      <>
+        <span>{children}</span>
+        <div className="mb-0.5" />
+      </>
+    );
+  }
+
+  if (node.tagName === 'img') {
+    return (
+      <img
+        src={node.getAttribute('src') ?? ''}
+        alt={node.getAttribute('alt') ?? ''}
+      />
+    );
+  }
 }
 
 function subheading(kind: string) {
@@ -86,8 +118,12 @@ function subheading(kind: string) {
       return 'fundamental building blocks';
     case 'natural phenomena':
       return 'by universal decree';
+    case 'people':
+      return 'sensing motives';
     case 'region':
       return 'worldly insight';
+    case 'technology':
+      return 'unyielding progress';
     default:
       return 'repository of knowledge';
   }
@@ -100,7 +136,10 @@ const Doc: NextPage<{
   return (
     <>
       <Head>
-        <title>The Archive • {document.name}</title>
+        <title>
+          The Archive •{' '}
+          {!!document.config.dsp ? document.config.dsp : document.name}
+        </title>
       </Head>
       <div className="container mx-auto mt-6">
         <div className="flex flex-col">
@@ -124,11 +163,17 @@ const Doc: NextPage<{
         </div>
         <div className="mt-4 flex flex-row">
           <div className="hidden md:block md:basis-1/5 lg:basis-1/6">
-            <Tree tree={tree} kind={document.kind} selected={document.name} />
+            <Tree
+              tree={tree}
+              kind={document.kind}
+              selected={
+                !!document.config.dsp ? document.config.dsp : document.name
+              }
+            />
           </div>
           <div className="md:basis-4/5 lg:basis-5/6">
             <h2 className="font-eczar text-xl text-crimson-500">
-              {document.name}{' '}
+              {!!document.config.dsp ? document.config.dsp : document.name}{' '}
               {document.config.ipa ? (
                 <span className="text-base small-caps">
                   ({document.config.ipa})
@@ -172,20 +217,53 @@ const Doc: NextPage<{
                 })}
               </div>
             </div>
-            {document.linked.length > 0 ? (
+            {document.linked.filter(({ name }) => name !== '').length > 0 ? (
               <>
-                <span className="font-gelasio mr-1 small-caps text-sm">
-                  Related documents:
+                <span className="font-gelasio mr-1 mt-2 small-caps text-sm">
+                  Linked documents:
                 </span>
-                {document.linked.map((doc) => (
-                  <a
-                    key={doc.name}
-                    className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double mr-1 small-caps text-sm"
-                    href={`/${urllize(doc.kind)}/${urllize(doc.name)}`}
-                  >
-                    {doc.name}
-                  </a>
-                ))}{' '}
+                {pipe(
+                  filter<{
+                    kind: string;
+                    name: string;
+                  }>(({ name }) => name !== ''),
+                  groupBy(prop('kind')),
+                  toPairs,
+                  sortBy(
+                    ([key]: [string, { kind: string; name: string }[]]) => key
+                  ),
+                  map(
+                    ([key, docs]: [
+                      string,
+                      Array<{
+                        kind: string;
+                        name: string;
+                      }>
+                    ]) => {
+                      return (
+                        <div className="ml-2" key={key}>
+                          <span className="font-gelasio small-caps text-sm mr-1">
+                            {key.toLocaleLowerCase()}
+                          </span>
+                          {map(
+                            (doc) => (
+                              <a
+                                key={doc.name}
+                                className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double mr-1 small-caps text-sm"
+                                href={`/${urllize(doc.kind)}/${urllize(
+                                  doc.name
+                                )}`}
+                              >
+                                {doc.name}
+                              </a>
+                            ),
+                            docs
+                          )}
+                        </div>
+                      );
+                    }
+                  )
+                )(document.linked)}
               </>
             ) : (
               <></>

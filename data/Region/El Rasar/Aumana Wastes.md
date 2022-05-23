@@ -1,0 +1,1 @@
+A harsh desert environ in the southern half of El-Rasar. While some attribute the frequent mirage sightings in this region to extreme thirst, others believe the golden sand has hallucinatory properties.

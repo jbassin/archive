@@ -5,13 +5,15 @@ export type Config = {
   refs: string[];
   ipa: string | null;
   img: string | null;
+  dsp: string | null;
 };
 
 function recordToConfig(record: Record<string, string>): Config {
   const refs = record['refs']?.split('|').map((x) => x.trim()) ?? [];
   const ipa = record['ipa']?.trim() ?? null;
   const img = record['img']?.trim() ?? null;
-  return { refs, ipa, img };
+  const dsp = record['dsp']?.trim() ?? null;
+  return { refs, ipa, img, dsp };
 }
 
 export const parseConfig: (_: string) => Config = pipe(

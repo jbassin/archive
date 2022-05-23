@@ -1,5 +1,15 @@
 import produce from 'immer';
-import { chain, concat, find, map, pipe, prop, sortBy, uniqBy } from 'ramda';
+import {
+  chain,
+  concat,
+  find,
+  map,
+  pipe,
+  prop,
+  replace,
+  sortBy,
+  uniqBy,
+} from 'ramda';
 import { Config } from './config';
 import { Document, Section, urllize } from './document';
 
@@ -27,7 +37,10 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
     ),
     map(
       ([str, document]) =>
-        [new RegExp(str, 'i'), document] as [RegExp, Document]
+        [
+          new RegExp(`(?<!%\\()(?<!%)(?<=\\b)${str}(?:'?s)?(?=\\b)`, 'i'),
+          document,
+        ] as [RegExp, Document]
     )
   )(documents);
 
@@ -64,6 +77,26 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
               section.rhs = section.rhs.replace(re, replacer);
               break;
             }
+          }
+        }
+      }
+
+      const replacer = pipe(
+        replace(/%(\w+)/g, '$1'),
+        replace(/%\((\w+)\)/g, '$1')
+      );
+
+      for (let idx = 0; idx < document.text.length; idx++) {
+        const section = document.text[idx];
+        switch (section.columns) {
+          case 1: {
+            section.section = replacer(section.section);
+            break;
+          }
+          case 2: {
+            section.lhs = replacer(section.lhs);
+            section.rhs = replacer(section.rhs);
+            break;
           }
         }
       }
@@ -131,7 +164,8 @@ const markdown = md({
   linkify: true,
   typographer: true,
   breaks: true,
-});
+  // eslint-disable-next-line @typescript-eslint/no-var-requires
+}).use(require('markdown-it-deflist'));
 
 export function renderDoc(document: FinalizedDocument): Section[] {
   return produce(document.text, (draft) => {

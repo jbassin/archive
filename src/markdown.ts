@@ -66,7 +66,13 @@ function getInternalTree(level: number, nodes: FinalizedDocument[]) {
 
   return produce([] as DocumentTree[], (draft) => {
     for (const node of inter.nodes) {
-      draft.push({ kind: 'leaf', node: { name: node.name, kind: node.kind } });
+      draft.push({
+        kind: 'leaf',
+        node: {
+          name: !!node.config.dsp ? node.config.dsp : node.name,
+          kind: node.kind,
+        },
+      });
     }
 
     for (const key in inter.children) {
