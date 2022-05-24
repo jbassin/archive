@@ -125,6 +125,10 @@ function transform(node: HTMLElement, children: Node[]): React.ReactNode {
       />
     );
   }
+
+  if (node.tagName === 'code') {
+    return <code className="text-sm font-roboto small-caps">{children}</code>;
+  }
 }
 
 function subheading(kind: string) {

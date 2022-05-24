@@ -82,9 +82,14 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
         }
       }
 
+      const footnotes: { text: string; tooltip: string }[] = [];
       const replacer = pipe(
         replace(/%(\w+)/g, '$1'),
-        replace(/%\((\w+)\)/g, '$1')
+        replace(/%\((\w+)\)/g, '$1'),
+        replace(/@footnote\(\s*(.+?)\s*,\s*(.+?)\s*\)/g, (_, text, tooltip) => {
+          footnotes.push({ text, tooltip });
+          return `<abbr title="${tooltip}"><sup>${text}</sup></abbr>`;
+        })
       );
 
       for (let idx = 0; idx < document.text.length; idx++) {
@@ -92,11 +97,24 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
         switch (section.columns) {
           case 1: {
             section.section = replacer(section.section);
+            if (idx === document.text.length - 1) {
+              section.section += '\n\n';
+              for (const { text, tooltip } of footnotes) {
+                section.section += `<span class="md:hidden text-sm"><b>${text}.</b> ${tooltip}<br /></span>`;
+              }
+            }
             break;
           }
           case 2: {
             section.lhs = replacer(section.lhs);
             section.rhs = replacer(section.rhs);
+
+            if (idx === document.text.length - 1) {
+              section.lhs += '\n\n';
+              for (const { text, tooltip } of footnotes) {
+                section.lhs += `<span class="md:hidden text-sm"><b>${text}.</b> ${tooltip}<br /></span>`;
+              }
+            }
             break;
           }
         }
