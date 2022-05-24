@@ -1,4 +1,4 @@
-const escape = (x) => x.map((x) => `'${x}'`).join(' ');
+const escape = (x) => x.map((x) => `"${x.replace('"', `\\"`)}"`).join(' ');
 
 module.exports = {
   '**/*.(ts|tsx)': () => 'pnpm tsc --noEmit',
