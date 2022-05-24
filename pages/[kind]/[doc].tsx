@@ -131,16 +131,24 @@ function subheading(kind: string) {
   switch (kind.toLocaleLowerCase()) {
     case 'ancestry':
       return 'know your roots';
+    case 'creature':
+      return 'goes bump in the night';
     case 'divinity':
       return 'knowledge of the gods';
+    case 'location':
+      return 'worldly insight';
+    case 'log':
+      return 'a daily chronicle';
     case 'material':
       return 'fundamental building blocks';
     case 'natural phenomena':
       return 'by universal decree';
+    case 'organization':
+      return 'groups of import';
     case 'people':
       return 'sensing motives';
-    case 'region':
-      return 'worldly insight';
+    case 'realm':
+      return 'celestial bodies';
     case 'technology':
       return 'unyielding progress';
     default:
@@ -310,6 +318,15 @@ const Doc: NextPage<{
           </div>
         </div>
       </div>
+      {document.name === 'The First House' ? (
+        <div className="absolute top-20 md:top-32 left-0 opacity-25 flex w-full h-full justify-center -z-50">
+          <img
+            className="absolute"
+            src="/eye.webp"
+            alt="NOCTIS SEES ALL. NOCTIS SEES YOU"
+          />
+        </div>
+      ) : null}
     </>
   );
 };

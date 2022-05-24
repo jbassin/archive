@@ -1,4 +1,4 @@
-import { Index, Query } from 'lunr';
+import { Index, tokenizer } from 'lunr';
 import useSWR from 'swr';
 import { uuid } from '../src/app';
 import { useState } from 'react';
@@ -21,9 +21,7 @@ export default function Search({ className }: { className: string }) {
 
   const search = !!index
     ? index.query(function () {
-        this.term(query, {
-          wildcard: Query.wildcard.LEADING | Query.wildcard.TRAILING,
-        });
+        this.term(tokenizer(`*${query}*`), {});
       })
     : [];
 

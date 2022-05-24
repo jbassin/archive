@@ -27,7 +27,13 @@ export type Document = {
 };
 
 export function urllize(str: string): string {
-  return encodeURIComponent(str.replaceAll(' ', '-').toLocaleLowerCase());
+  return encodeURIComponent(
+    str
+      .replaceAll(' ', '-')
+      .replaceAll('&', 'and')
+      .replaceAll('®', '')
+      .toLocaleLowerCase()
+  );
 }
 
 function parseFilepath(filepath: string) {
@@ -43,8 +49,11 @@ function parseFilepath(filepath: string) {
     split('.'),
     dropLast(1) as (_: string[]) => string[],
     join('.'),
-    replace(/\b./g, toUpper),
-    replace(/-/g, ' ')
+    replace(/\s./g, toUpper),
+    replace(/-/g, ' '),
+    replace(/(?<!^)And/g, 'and'),
+    replace(/(?<!^)Of/g, 'of'),
+    replace(/(?<!^)The/g, 'the')
   )(path);
 
   return {

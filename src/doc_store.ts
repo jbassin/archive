@@ -32,6 +32,7 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
       (document: Document) =>
         [
           [document.name, document],
+          ...(!!document.config.dsp ? [[document.config.dsp, document]] : []),
           ...map((x: string) => [x, document], document.config.refs),
         ] as [string, Document][]
     ),

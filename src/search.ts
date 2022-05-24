@@ -11,7 +11,13 @@ export async function buildIndex(): Promise<Index> {
 
   const index = lunr(function () {
     this.ref('id');
-    this.field('name', { boost: 10 });
+    this.field('name', {
+      boost: 10,
+      extractor: (_doc: object) => {
+        const doc = _doc as FinalizedDocument;
+        return !!doc.config.dsp ? doc.config.dsp : doc.name;
+      },
+    });
     this.field('text', {
       extractor: (doc: object) => {
         return pipe(

@@ -1,0 +1,1 @@
+The Tidereader's Rest is a saloon in the southern end of Toleros. Mostly catering to travellers and adventurers not part of The Guild, the store offers cheap beds, acceptable beer, and a pretty good view of Toleros' water channels.
