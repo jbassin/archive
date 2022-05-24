@@ -1,0 +1,1 @@
+The Mistwatch Arcanum is a series of building in the southeastern corner of Toleros. All under the umbrella of the Trust, most of the buildings are libraries or research labs, with a smattering of administrative buildings spread throughout. Anyone can peruse the arcanum's library, but only members are allowed to check out books or enter the restricted areas.
