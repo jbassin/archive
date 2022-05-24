@@ -32,12 +32,16 @@ export async function getData() {
 }
 
 type DocumentTree =
-  | { kind: 'leaf'; node: { name: string; kind: string } }
+  | {
+      kind: 'leaf';
+      node: { name: string; kind: string; date: string | null };
+    }
   | { kind: 'branch'; name: string; children: DocumentTree[] };
 
 export type DocumentHierarchy = {
   name: string;
   kind: string;
+  date: string | null;
   children: DocumentHierarchy[];
 };
 
@@ -71,6 +75,7 @@ function getInternalTree(level: number, nodes: FinalizedDocument[]) {
         node: {
           name: !!node.config.dsp ? node.config.dsp : node.name,
           kind: node.kind,
+          date: node.config.date,
         },
       });
     }
@@ -94,7 +99,12 @@ function normalizeTree(tree: DocumentTree) {
 
     case 'branch': {
       return produce(
-        { name: tree.name, kind: tree.kind, children: [] } as DocumentHierarchy,
+        {
+          name: tree.name,
+          kind: tree.kind,
+          date: null,
+          children: [],
+        } as DocumentHierarchy,
         (draft) => {
           for (const curNode of tree.children) {
             switch (curNode.kind) {
@@ -106,6 +116,7 @@ function normalizeTree(tree: DocumentTree) {
               case 'leaf': {
                 draft.name = curNode.node.name;
                 draft.kind = curNode.node.kind;
+                draft.date = curNode.node.date;
               }
             }
           }

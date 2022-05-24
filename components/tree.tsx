@@ -9,7 +9,8 @@ import { useLocalStorage } from '../src/local_storage';
 import { DocumentHierarchy } from '../src/markdown';
 import { Transition } from '@headlessui/react';
 import Link from 'next/link';
-import { map, pipe, prop, sortBy } from 'ramda';
+import { map, pipe, sortBy } from 'ramda';
+import { AlthaneDate } from '../src/config';
 
 function color(idx: number) {
   return ['#CA9703', '#D5AD36', '#4488BF', '#265999'][idx % 4];
@@ -106,7 +107,9 @@ export default function Tree({
       >
         <>
           {pipe(
-            sortBy<DocumentHierarchy>(prop('name')),
+            sortBy<DocumentHierarchy>((doc) =>
+              doc.date ? new AlthaneDate(doc.date).compareKey() : doc.name
+            ),
             map((tree: DocumentHierarchy) => (
               <Tree
                 key={tree.name}

@@ -20,6 +20,7 @@ import Tree from '../../components/tree';
 import Search from '../../components/search';
 import Link from 'next/link';
 import Head from 'next/head';
+import { AlthaneDate } from '../../src/config';
 
 polyfill();
 
@@ -40,6 +41,23 @@ export const getStaticPaths: GetStaticPaths = async () => {
   );
 };
 
+function getPath(
+  tree: DocumentHierarchy,
+  kind: string,
+  name: string
+): { kind: string; name: string }[] {
+  if (urllize(tree.kind) === kind && urllize(tree.name) === name)
+    return [{ kind: urllize(tree.kind), name: urllize(tree.name) }];
+
+  for (const child of tree.children) {
+    const path = getPath(child, kind, name);
+    if (path.length > 0)
+      return [{ kind: urllize(tree.kind), name: urllize(tree.name) }, ...path];
+  }
+
+  return [];
+}
+
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const documents = await getData();
   const document = pipe(
@@ -48,9 +66,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )(documents);
 
   const tree = await getTree();
+  const path = getPath(tree, params?.kind as string, params?.doc as string);
 
   return {
-    props: { document, tree },
+    props: { document, tree, path },
   };
 };
 
@@ -132,6 +151,7 @@ function subheading(kind: string) {
 const Doc: NextPage<{
   document: FinalizedDocument;
   tree: DocumentHierarchy;
+  path: { kind: string; name: string }[];
 }> = ({ document, tree }) => {
   return (
     <>
@@ -141,7 +161,7 @@ const Doc: NextPage<{
           {!!document.config.dsp ? document.config.dsp : document.name}
         </title>
       </Head>
-      <div className="container mx-auto mt-6">
+      <div className="container mx-auto mt-6 px-3">
         <div className="flex flex-col">
           <div className="flex flex-col md:flex-row items-center mt-6 mb-1">
             <h1 className="text-2xl text-crimson-500 font-eczar">
@@ -172,16 +192,35 @@ const Doc: NextPage<{
             />
           </div>
           <div className="md:basis-4/5 lg:basis-5/6">
-            <h2 className="font-eczar text-xl text-crimson-500">
-              {!!document.config.dsp ? document.config.dsp : document.name}{' '}
-              {document.config.ipa ? (
-                <span className="text-base small-caps">
-                  ({document.config.ipa})
+            <div className="inline-block flex flex-col">
+              <div className="flex flex-row font-eczar text-xl text-crimson-500">
+                <div className="inline-block mr-2">
+                  {!!document.config.dsp ? document.config.dsp : document.name}
+                </div>
+                {document.config.ipa ? (
+                  <span className="text-base small-caps self-center">
+                    ({document.config.ipa})
+                  </span>
+                ) : null}
+                {(() => {
+                  if (document.config.date) {
+                    const date = new AlthaneDate(document.config.date);
+
+                    return (
+                      <span className="text-base text-sm font-roboto self-center">
+                        {date.day} {date.ppMonth()} {date.year} C{date.cycle}
+                      </span>
+                    );
+                  }
+                })()}
+              </div>
+              {!!document.config.news ? (
+                <span className="font-gelasio pl-2 text-gray-800 text-sm mt-[-0.3rem] mb-3">
+                  reporting by {document.config.news.author}, for the{' '}
+                  {document.config.news.paper}
                 </span>
-              ) : (
-                <></>
-              )}
-            </h2>
+              ) : null}
+            </div>
             <div className="flex flex-row">
               <div className="lg:basis-5/6 font-gelasio">
                 {renderDoc(document).map((section, idx) => {

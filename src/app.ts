@@ -1,1 +1,1 @@
-export const version = 1;
+export const uuid = 'BB1DBC43-CE90-4E8B-8799-60A1EAFE9E49';

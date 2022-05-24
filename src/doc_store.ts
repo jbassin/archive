@@ -38,7 +38,7 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
     map(
       ([str, document]) =>
         [
-          new RegExp(`(?<!%\\()(?<!%)(?<=\\b)${str}(?:'?s)?(?=\\b)`, 'i'),
+          new RegExp(`(?<!%\\()(?<!%)(?<=\\b)${str}(?:'?e?s)?(?=\\b)`, 'i'),
           document,
         ] as [RegExp, Document]
     )

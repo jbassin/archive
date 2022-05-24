@@ -1,6 +1,6 @@
 import { Index, Query } from 'lunr';
 import useSWR from 'swr';
-import { version } from '../src/app';
+import { uuid } from '../src/app';
 import { useState } from 'react';
 import { Combobox, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,14 +9,11 @@ import { useRouter } from 'next/router';
 import { urllize } from '../src/document';
 
 export default function Search({ className }: { className: string }) {
-  const { data: index } = useSWR(
-    `/index.json?version=${version}`,
-    async (url) => {
-      const data = await fetch(url);
-      const json = await data.json();
-      return Index.load(json);
-    }
-  );
+  const { data: index } = useSWR(`/index.json?uuid=${uuid}`, async (url) => {
+    const data = await fetch(url);
+    const json = await data.json();
+    return Index.load(json);
+  });
 
   const [selected, setSelected] = useState(null);
   const [query, setQuery] = useState('');
