@@ -11,6 +11,7 @@ import { Transition } from '@headlessui/react';
 import Link from 'next/link';
 import { map, pipe, sortBy } from 'ramda';
 import { AlthaneDate } from '../src/config';
+import { Theme } from '../src/theme';
 
 function color(idx: number) {
   return ['#CA9703', '#D5AD36', '#4488BF', '#265999'][idx % 4];
@@ -31,11 +32,13 @@ export default function Tree({
   level,
   kind,
   selected,
+  theme,
 }: {
   tree: DocumentHierarchy;
   level?: number;
   kind: string;
   selected: string;
+  theme: Theme;
 }) {
   const pathInSelection = inSelection(tree, kind, selected);
   const curLevel = level ?? 0;
@@ -55,6 +58,7 @@ export default function Tree({
             level={curLevel}
             kind={kind}
             selected={selected}
+            theme={theme}
           />
         ))}
       </div>
@@ -77,17 +81,17 @@ export default function Tree({
       )}
       <span>
         {tree.kind === 'branch' ? (
-          <span className="small-caps font-semibold font-roboto">
+          <span className={`${theme.font.alt} font-semibold small-caps`}>
             {tree.name}
           </span>
         ) : (
           <Link href={`/${urllize(tree.kind)}/${urllize(tree.name)}`}>
             <a
               className={[
-                'small-caps font-roboto',
+                `${theme.font.alt} small-caps`,
                 selected === tree.name
-                  ? 'text-background-400 bg-crimson-500 rounded px-0.5'
-                  : 'text-crimson-500',
+                  ? `${theme.text.bg} ${theme.bg.primary} rounded px-0.5`
+                  : theme.text.primary,
               ].join(' ')}
             >
               {tree.name}
@@ -117,6 +121,7 @@ export default function Tree({
                 level={curLevel + 1}
                 kind={kind}
                 selected={selected}
+                theme={theme}
               />
             ))
           )(tree.children)}

@@ -7,8 +7,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/router';
 import { urllize } from '../src/document';
+import { Theme } from '../src/theme';
 
-export default function Search({ className }: { className: string }) {
+export default function Search({
+  className,
+  theme,
+}: {
+  className: string;
+  theme: Theme;
+}) {
   const { data: index } = useSWR(`/index.json?uuid=${uuid}`, async (url) => {
     const data = await fetch(url);
     const json = await data.json();
@@ -26,7 +33,7 @@ export default function Search({ className }: { className: string }) {
     : [];
 
   return (
-    <div className={className}>
+    <div className={`${className} ${theme.text.main}`}>
       <Combobox
         value={selected}
         onChange={(select: Index.Result | null) => {
@@ -36,10 +43,10 @@ export default function Search({ className }: { className: string }) {
         }}
         nullable
       >
-        <div className="relative mt-1 font-gelasio">
+        <div className={`${theme.font.main} mt-1 relative`}>
           <div className="relative w-full cursor-default overflow-hidden bg-white rounded text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-crimson-500 focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-crimson-500 sm:text-sm">
             <Combobox.Input
-              className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0 focus:ring-crimson-500"
+              className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 focus:ring-0 focus:ring-crimson-500"
               displayValue={(res: Index.Result) => res?.ref.split('/')[1]}
               onChange={(event) => setQuery(event.target.value)}
               autoComplete="off"
@@ -49,7 +56,7 @@ export default function Search({ className }: { className: string }) {
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
               <FontAwesomeIcon
                 icon={faSearch}
-                className="h-5 w-5 text-crimson-500"
+                className={`${theme.text.primary} h-5 w-5`}
               />
             </Combobox.Button>
           </div>
@@ -61,7 +68,7 @@ export default function Search({ className }: { className: string }) {
           >
             <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
               {search.length === 0 && query !== '' ? (
-                <div className="relative cursor-default select-none py-2 px-4 text-gray-700">
+                <div className="relative cursor-default select-none py-2 px-4">
                   Nothing found.
                 </div>
               ) : (
@@ -70,7 +77,7 @@ export default function Search({ className }: { className: string }) {
                     key={res.ref}
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-4 pr-4 ${
-                        active ? 'bg-crimson-500 text-white' : 'text-gray-900'
+                        active ? `${theme.text.bg} ${theme.bg.primary}` : ''
                       }`
                     }
                     value={res}
@@ -87,7 +94,7 @@ export default function Search({ className }: { className: string }) {
                         {selected ? (
                           <span
                             className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                              active ? 'text-white' : 'text-crimson-500'
+                              active ? theme.text.bg : theme.text.primary
                             }`}
                           >
                             <FontAwesomeIcon

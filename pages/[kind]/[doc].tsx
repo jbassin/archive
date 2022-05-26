@@ -17,10 +17,11 @@ import { FinalizedDocument, renderDoc } from '../../src/doc_store';
 import { Interweave, Node } from 'interweave';
 import { polyfill } from 'interweave-ssr';
 import Tree from '../../components/tree';
-import Search from '../../components/search';
-import Link from 'next/link';
 import Head from 'next/head';
 import { AlthaneDate } from '../../src/config';
+import { getTheme, Theme } from '../../src/theme';
+import Path from '../../components/path';
+import Header from '../../components/header';
 
 polyfill();
 
@@ -73,62 +74,74 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-function transform(node: HTMLElement, children: Node[]): React.ReactNode {
-  if (node.tagName === 'h3') {
-    return <h1 className="text-md font-tauri text-crimson-500">{children}</h1>;
-  }
-
-  if (node.tagName === 'ol') {
-    return <ol className="list-decimal list-inside">{children}</ol>;
-  }
-
-  if (node.tagName === 'ul') {
-    return <ul className="list-disc list-inside">{children}</ul>;
-  }
-
-  if (node.tagName === 'p') {
-    return <p className="font-gelasio mb-2">{children}</p>;
-  }
-
-  if (node.tagName === 'a') {
-    return (
-      <Link href={node.getAttribute('href') ?? ''}>
-        <a className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double">
+function transform(theme: Theme) {
+  function transform(node: HTMLElement, children: Node[]): React.ReactNode {
+    if (node.tagName === 'h3') {
+      return (
+        <h1 className={`${theme.text.primary} ${theme.font.subtitle} text-md`}>
           {children}
-        </a>
-      </Link>
-    );
+        </h1>
+      );
+    }
+
+    if (node.tagName === 'ol') {
+      return <ol className="list-decimal list-inside">{children}</ol>;
+    }
+
+    if (node.tagName === 'ul') {
+      return <ul className="list-disc list-inside">{children}</ul>;
+    }
+
+    if (node.tagName === 'p') {
+      return <p className={`${theme.font.main} mb-2`}>{children}</p>;
+    }
+
+    if (node.tagName === 'a') {
+      return (
+        <Path
+          href={node.getAttribute('href') ?? ''}
+          contents={children}
+          theme={theme}
+        />
+      );
+    }
+
+    if (node.tagName === 'dl') {
+      return <div>{children}</div>;
+    }
+
+    if (node.tagName === 'dt') {
+      return <span className="font-black small-caps">{children}</span>;
+    }
+
+    if (node.tagName === 'dd') {
+      return (
+        <>
+          <span>{children}</span>
+          <div className="mb-0.5" />
+        </>
+      );
+    }
+
+    if (node.tagName === 'img') {
+      return (
+        <img
+          src={node.getAttribute('src') ?? ''}
+          alt={node.getAttribute('alt') ?? ''}
+        />
+      );
+    }
+
+    if (node.tagName === 'code') {
+      return (
+        <code className={`${theme.font.alt} text-sm small-caps`}>
+          {children}
+        </code>
+      );
+    }
   }
 
-  if (node.tagName === 'dl') {
-    return <div>{children}</div>;
-  }
-
-  if (node.tagName === 'dt') {
-    return <span className="font-black small-caps">{children}</span>;
-  }
-
-  if (node.tagName === 'dd') {
-    return (
-      <>
-        <span>{children}</span>
-        <div className="mb-0.5" />
-      </>
-    );
-  }
-
-  if (node.tagName === 'img') {
-    return (
-      <img
-        src={node.getAttribute('src') ?? ''}
-        alt={node.getAttribute('alt') ?? ''}
-      />
-    );
-  }
-
-  if (node.tagName === 'code') {
-    return <code className="text-sm font-roboto small-caps">{children}</code>;
-  }
+  return transform;
 }
 
 function subheading(kind: string) {
@@ -165,6 +178,8 @@ const Doc: NextPage<{
   tree: DocumentHierarchy;
   path: { kind: string; name: string }[];
 }> = ({ document, tree }) => {
+  const theme = getTheme(document.config.theme);
+
   return (
     <>
       <Head>
@@ -174,25 +189,7 @@ const Doc: NextPage<{
         </title>
       </Head>
       <div className="container mx-auto mt-6 px-3">
-        <div className="flex flex-col">
-          <div className="flex flex-col md:flex-row items-center mt-6 mb-1">
-            <h1 className="text-2xl text-crimson-500 font-eczar">
-              archive.
-              <span className="text-lg text-slate-500 font-tauri pl-2">
-                {subheading(document.kind)}
-              </span>
-            </h1>
-            <div className="flex-grow" />
-            <Search className="z-10 w-full md:w-2/5" />
-          </div>
-          <div className="hidden md:block relative h-32 overflow-hidden rounded">
-            <img
-              src="https://i.imgur.com/OpyUXz1.png"
-              alt=""
-              className="absolute w-full"
-            />
-          </div>
-        </div>
+        <Header theme={theme} subheading={subheading(document.kind)} />
         <div className="mt-4 flex flex-row">
           <div className="hidden md:block md:basis-1/5 lg:basis-1/6">
             <Tree
@@ -201,11 +198,14 @@ const Doc: NextPage<{
               selected={
                 !!document.config.dsp ? document.config.dsp : document.name
               }
+              theme={theme}
             />
           </div>
           <div className="md:basis-4/5 lg:basis-5/6">
             <div className="inline-block flex flex-col">
-              <div className="flex flex-row font-eczar text-xl text-crimson-500">
+              <div
+                className={`${theme.text.primary} ${theme.font.title} flex flex-row text-xl`}
+              >
                 <div className="inline-block mr-2">
                   {!!document.config.dsp ? document.config.dsp : document.name}
                 </div>
@@ -219,7 +219,9 @@ const Doc: NextPage<{
                     const date = new AlthaneDate(document.config.date);
 
                     return (
-                      <span className="text-base text-sm font-roboto self-center">
+                      <span
+                        className={`${theme.font.alt} text-base text-sm self-center`}
+                      >
                         {date.day} {date.ppMonth()} {date.year} C{date.cycle}
                       </span>
                     );
@@ -227,14 +229,16 @@ const Doc: NextPage<{
                 })()}
               </div>
               {!!document.config.news ? (
-                <span className="font-gelasio pl-2 text-gray-800 text-sm mt-[-0.3rem] mb-3">
+                <span
+                  className={`${theme.text.soft} ${theme.font.main} text-sm pl-2 mb-3 mt-[-0.3rem]`}
+                >
                   reporting by {document.config.news.author}, for the{' '}
                   {document.config.news.paper}
                 </span>
               ) : null}
             </div>
             <div className="flex flex-row">
-              <div className="lg:basis-5/6 font-gelasio">
+              <div className="lg:basis-5/6">
                 {renderDoc(document).map((section, idx) => {
                   switch (section.columns) {
                     case 1: {
@@ -242,23 +246,23 @@ const Doc: NextPage<{
                         <Interweave
                           key={idx}
                           content={section.section}
-                          transform={transform}
+                          transform={transform(theme)}
                         />
                       );
                     }
                     case 2: {
                       return (
                         <div key={idx} className="flex flex-row">
-                          <div className="basis-1/2 font-gelasio pr-2">
+                          <div className="basis-1/2 pr-2">
                             <Interweave
                               content={section.lhs}
-                              transform={transform}
+                              transform={transform(theme)}
                             />
                           </div>
-                          <div className="basis-1/2 font-gelasio pl-2">
+                          <div className="basis-1/2 pl-2">
                             <Interweave
                               content={section.rhs}
-                              transform={transform}
+                              transform={transform(theme)}
                             />
                           </div>
                         </div>
@@ -270,7 +274,9 @@ const Doc: NextPage<{
             </div>
             {document.linked.filter(({ name }) => name !== '').length > 0 ? (
               <>
-                <span className="font-gelasio mr-1 mt-2 small-caps text-sm">
+                <span
+                  className={`${theme.font.main} small-caps text-sm mr-1 mt-2`}
+                >
                   Linked documents:
                 </span>
                 {pipe(
@@ -293,20 +299,22 @@ const Doc: NextPage<{
                     ]) => {
                       return (
                         <div className="ml-2" key={key}>
-                          <span className="font-gelasio small-caps text-sm mr-1">
+                          <span
+                            className={`${theme.font.main} small-caps text-sm mr-1`}
+                          >
                             {key.toLocaleLowerCase()}
                           </span>
                           {map(
                             (doc) => (
-                              <a
+                              <Path
                                 key={doc.name}
-                                className="font-gelasio text-crimson-500 underline decoration-solid visited:decoration-double mr-1 small-caps text-sm"
                                 href={`/${urllize(doc.kind)}/${urllize(
                                   doc.name
                                 )}`}
-                              >
-                                {doc.name}
-                              </a>
+                                contents={doc.name}
+                                theme={theme}
+                                className="small-caps mr-1 text-sm"
+                              />
                             ),
                             docs
                           )}
