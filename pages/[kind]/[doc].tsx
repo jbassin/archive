@@ -22,6 +22,7 @@ import { AlthaneDate } from '../../src/config';
 import { getTheme, Theme } from '../../src/theme';
 import Path from '../../components/path';
 import Header from '../../components/header';
+import Flag from '../../components/flag';
 
 polyfill();
 
@@ -237,6 +238,9 @@ const Doc: NextPage<{
                 </span>
               ) : null}
             </div>
+            {!!document.config.flag ? (
+              <Flag flag={document.config.flag} theme={theme} />
+            ) : null}
             <div className="flex flex-row">
               <div className="lg:basis-5/6">
                 {renderDoc(document).map((section, idx) => {

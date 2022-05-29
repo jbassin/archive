@@ -65,6 +65,7 @@ export type Config = {
   date: string | null;
   news: { author: string; paper: string } | null;
   theme: string | null;
+  flag: string | null;
 };
 
 function recordToConfig(record: Record<string, string>): Config {
@@ -75,6 +76,7 @@ function recordToConfig(record: Record<string, string>): Config {
   const date = record['date']?.trim() ?? null;
   const news = record['news']?.split('|').map((x) => x.trim()) ?? [];
   const theme = record['theme']?.trim() ?? null;
+  const flag = record['flag']?.trim() ?? null;
   return {
     refs,
     ipa,
@@ -83,6 +85,7 @@ function recordToConfig(record: Record<string, string>): Config {
     date,
     news: news.length > 0 ? { author: news[0], paper: news[1] } : null,
     theme,
+    flag,
   };
 }
 

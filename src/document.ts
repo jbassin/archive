@@ -53,7 +53,8 @@ function parseFilepath(filepath: string) {
     replace(/-/g, ' '),
     replace(/(?<!^)And/g, 'and'),
     replace(/(?<!^)Of/g, 'of'),
-    replace(/(?<!^)The/g, 'the')
+    replace(/(?<!^)The/g, 'the'),
+    replace(/(?<!^)From/g, 'from')
   )(path);
 
   return {
