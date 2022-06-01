@@ -23,6 +23,8 @@ import { getTheme, Theme } from '../../src/theme';
 import Path from '../../components/path';
 import Header from '../../components/header';
 import Flag from '../../components/flag';
+import { useState } from 'react';
+import { Transition } from '@headlessui/react';
 
 polyfill();
 
@@ -180,6 +182,7 @@ const Doc: NextPage<{
   path: { kind: string; name: string }[];
 }> = ({ document, tree }) => {
   const theme = getTheme(document.config.theme);
+  const [toggleFlag, setToggleFlag] = useState(false);
 
   return (
     <>
@@ -239,98 +242,110 @@ const Doc: NextPage<{
               ) : null}
             </div>
             {!!document.config.flag ? (
-              <Flag flag={document.config.flag} theme={theme} />
+              <Flag
+                flag={document.config.flag}
+                theme={theme}
+                toggleEvent={setToggleFlag}
+              />
             ) : null}
-            <div className="flex flex-row">
-              <div className="lg:basis-5/6">
-                {renderDoc(document).map((section, idx) => {
-                  switch (section.columns) {
-                    case 1: {
-                      return (
-                        <Interweave
-                          key={idx}
-                          content={section.section}
-                          transform={transform(theme)}
-                        />
-                      );
-                    }
-                    case 2: {
-                      return (
-                        <div key={idx} className="flex flex-row">
-                          <div className="basis-1/2 pr-2">
-                            <Interweave
-                              content={section.lhs}
-                              transform={transform(theme)}
-                            />
-                          </div>
-                          <div className="basis-1/2 pl-2">
-                            <Interweave
-                              content={section.rhs}
-                              transform={transform(theme)}
-                            />
-                          </div>
-                        </div>
-                      );
-                    }
-                  }
-                })}
-              </div>
-            </div>
-            {document.linked.filter(({ name }) => name !== '').length > 0 ? (
-              <>
-                <span
-                  className={`${theme.font.main} small-caps text-sm mr-1 mt-2`}
-                >
-                  Linked documents:
-                </span>
-                {pipe(
-                  filter<{
-                    kind: string;
-                    name: string;
-                  }>(({ name }) => name !== ''),
-                  groupBy(prop('kind')),
-                  toPairs,
-                  sortBy(
-                    ([key]: [string, { kind: string; name: string }[]]) => key
-                  ),
-                  map(
-                    ([key, docs]: [
-                      string,
-                      Array<{
-                        kind: string;
-                        name: string;
-                      }>
-                    ]) => {
-                      return (
-                        <div className="ml-2" key={key}>
-                          <span
-                            className={`${theme.font.main} small-caps text-sm mr-1`}
-                          >
-                            {key.toLocaleLowerCase()}
-                          </span>
-                          {map(
-                            (doc) => (
-                              <Path
-                                key={doc.name}
-                                href={`/${urllize(doc.kind)}/${urllize(
-                                  doc.name
-                                )}`}
-                                contents={doc.name}
-                                theme={theme}
-                                className="small-caps mr-1 text-sm"
+            <Transition
+              show={!document.config.flag || toggleFlag || false}
+              enter="transform transition ease-in duration-200"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="transform duration-200 transition ease-in"
+              leaveFrom="opacity-100 scale-100 "
+              leaveTo="opacity-0 scale-95"
+            >
+              <div className="flex flex-row">
+                <div className="lg:basis-5/6">
+                  {renderDoc(document).map((section, idx) => {
+                    switch (section.columns) {
+                      case 1: {
+                        return (
+                          <Interweave
+                            key={idx}
+                            content={section.section}
+                            transform={transform(theme)}
+                          />
+                        );
+                      }
+                      case 2: {
+                        return (
+                          <div key={idx} className="flex flex-row">
+                            <div className="basis-1/2 pr-2">
+                              <Interweave
+                                content={section.lhs}
+                                transform={transform(theme)}
                               />
-                            ),
-                            docs
-                          )}
-                        </div>
-                      );
+                            </div>
+                            <div className="basis-1/2 pl-2">
+                              <Interweave
+                                content={section.rhs}
+                                transform={transform(theme)}
+                              />
+                            </div>
+                          </div>
+                        );
+                      }
                     }
-                  )
-                )(document.linked)}
-              </>
-            ) : (
-              <></>
-            )}
+                  })}
+                </div>
+              </div>
+              {document.linked.filter(({ name }) => name !== '').length > 0 ? (
+                <>
+                  <span
+                    className={`${theme.font.main} small-caps text-sm mr-1 mt-2`}
+                  >
+                    Linked documents:
+                  </span>
+                  {pipe(
+                    filter<{
+                      kind: string;
+                      name: string;
+                    }>(({ name }) => name !== ''),
+                    groupBy(prop('kind')),
+                    toPairs,
+                    sortBy(
+                      ([key]: [string, { kind: string; name: string }[]]) => key
+                    ),
+                    map(
+                      ([key, docs]: [
+                        string,
+                        Array<{
+                          kind: string;
+                          name: string;
+                        }>
+                      ]) => {
+                        return (
+                          <div className="ml-2" key={key}>
+                            <span
+                              className={`${theme.font.main} small-caps text-sm mr-1`}
+                            >
+                              {key.toLocaleLowerCase()}
+                            </span>
+                            {map(
+                              (doc) => (
+                                <Path
+                                  key={doc.name}
+                                  href={`/${urllize(doc.kind)}/${urllize(
+                                    doc.name
+                                  )}`}
+                                  contents={doc.name}
+                                  theme={theme}
+                                  className="small-caps mr-1 text-sm"
+                                />
+                              ),
+                              docs
+                            )}
+                          </div>
+                        );
+                      }
+                    )
+                  )(document.linked)}
+                </>
+              ) : null}
+            </Transition>
           </div>
         </div>
       </div>

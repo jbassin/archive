@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useLocalStorage } from '../src/local_storage';
 import { Theme } from '../src/theme';
 
@@ -5,12 +6,20 @@ export default function Flag({
   flag,
   className,
   theme,
+  toggleEvent,
 }: {
   flag: string;
   className?: string;
   theme: Theme;
+  toggleEvent?: (_: boolean) => void;
 }) {
-  const [toggled, setToggled] = useLocalStorage(`flag/${flag}`, true);
+  const [toggled, setToggled] = useLocalStorage(`flag/${flag}`, false);
+
+  useEffect(() => {
+    if (toggleEvent) {
+      toggleEvent(toggled);
+    }
+  }, [toggled, toggleEvent]);
 
   return (
     <div
@@ -18,29 +27,9 @@ export default function Flag({
         theme.bg.primary
       } ${
         theme.font.main
-      } border-black border rounded cursor-pointer select-none p-1 mb-2 w-full flex flex-row`}
-      onClick={() => setToggled(!toggled)}
+      } border-black border rounded select-none p-1 mb-2 w-full flex flex-row`}
     >
       {toggled ? (
-        <>
-          <img src="/thessian.gif" alt="" className="w-36" />
-          <div className="mt-2 pl-2">
-            {(() => {
-              switch (flag) {
-                default:
-                  return (
-                    <span>
-                      Warning! Access to enclosed data is restricted to class
-                      green observers and above. Distribution to unauthorized or
-                      somatic individuals is a direct violation of Injunction
-                      144-D. By proceeding further you affirm
-                    </span>
-                  );
-              }
-            })()}
-          </div>
-        </>
-      ) : (
         <>
           {(() => {
             switch (flag) {
@@ -53,6 +42,36 @@ export default function Flag({
                 );
             }
           })()}
+        </>
+      ) : (
+        <>
+          <img src="/thessian.gif" alt="" className="w-36" />
+          <div className="relative mt-2 pl-2">
+            {(() => {
+              switch (flag) {
+                default:
+                  return (
+                    <>
+                      <span>
+                        <span className="semibold">Warning!</span> The enclosed
+                        data is a class-D psychohazard and is restricted to
+                        yellow ranked observers and above. Distribution to
+                        unauthorized or somatic individuals is a direct
+                        violation of Injunction 144-G, and may cause
+                        significant, irreparable damage. By proceeding further
+                        you affirm your complete privacy.
+                      </span>
+                      <button
+                        className={`${theme.bg.soft} hover:bg-cyan-900 rounded absolute bottom-0 right-0 float-right p-2`}
+                        onClick={() => setToggled(!toggled)}
+                      >
+                        Authenticate
+                      </button>
+                    </>
+                  );
+              }
+            })()}
+          </div>
         </>
       )}
     </div>

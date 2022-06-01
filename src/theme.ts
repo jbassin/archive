@@ -11,6 +11,8 @@ export type Text = {
 
 export type Background = {
   primary: string;
+  soft: string;
+  hard: string;
   bg: string;
 };
 
@@ -38,6 +40,8 @@ const default_ = {
   },
   bg: {
     primary: 'bg-crimson-500',
+    soft: 'bg-crimson-700',
+    hard: 'bg-crimson-800',
     bg: 'bg-background-400',
   },
   font: {
@@ -54,8 +58,10 @@ function theme(f: (_: WritableDraft<Theme>) => void) {
 }
 
 const astra = theme((t) => {
-  t.text.primary = 'text-cyan-800';
-  t.bg.primary = 'bg-cyan-800';
+  t.text.primary = 'text-cyan-700';
+  t.bg.primary = 'bg-cyan-700';
+  t.bg.soft = 'bg-cyan-800';
+  t.bg.hard = 'bg-cyan-900';
   t.header = '/header2.jpeg';
 });
 

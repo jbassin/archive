@@ -88,7 +88,7 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
         replace(/%\((\w+)\)/g, '$1'),
         replace(/@footnote\(\s*(.+?)\s*,\s*(.+?)\s*\)/g, (_, text, tooltip) => {
           footnotes.push({ text, tooltip });
-          return `<abbr title="${tooltip}"><sup>${text}</sup></abbr>`;
+          return `<abbr title="${tooltip}" class="cursor-help"><sup>${text}</sup></abbr>`;
         })
       );
 
@@ -100,7 +100,7 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
             if (idx === document.text.length - 1) {
               section.section += '\n\n';
               for (const { text, tooltip } of footnotes) {
-                section.section += `<span class="md:hidden text-sm"><b>${text}.</b> ${tooltip}<br /></span>`;
+                section.section += `<span class="text-sm text-slate-700"><b>${text}.</b> ${tooltip}<br /></span>`;
               }
             }
             break;

@@ -6,7 +6,7 @@ news: Cpl. Arkov | RC-4 Pinnacle Exploration
 Exploration party #6, selected from Kerneyy prison outpost.
 
 ```
-08:15 Volunteers procured from %(Kerneyy prison outpost).
+08:15 Volunteers procured from %Kerneyy prison outpost.
 12:33 Introduced into cavern entrance.
 12:51 Discovered small stonework settlement. Did not investigate.
 13:14 Encountered creatures of crystalline structure. Responsible for destruction of previous exploration team.
