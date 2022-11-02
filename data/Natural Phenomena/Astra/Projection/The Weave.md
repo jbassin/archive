@@ -1,6 +1,5 @@
 ---
 theme: astra
-refs: the weft
 flag: compendium
 ---
 

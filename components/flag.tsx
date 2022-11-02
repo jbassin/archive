@@ -37,7 +37,7 @@ export default function Flag({
                 return (
                   <span className={`${theme.font.alt} text-sm small-caps pl-3`}>
                     datastream origin ꡕꡖꡟꡣꡂ... connected. opening
-                    kathe.encyc.sim. retrieval success, displayed below.
+                    kaathe.encyc.sim. retrieval success, displayed below.
                   </span>
                 );
             }
