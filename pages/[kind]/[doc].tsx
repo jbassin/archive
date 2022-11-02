@@ -1,6 +1,9 @@
+import { Transition } from '@headlessui/react';
+import produce from 'immer';
+import { Interweave, Node } from 'interweave';
+import { polyfill } from 'interweave-ssr';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
-import { DocumentHierarchy, getData, getTree } from '../../src/markdown';
-import { Document, urllize } from '../../src/document';
+import Head from 'next/head';
 import {
   filter,
   groupBy,
@@ -12,19 +15,16 @@ import {
   sortBy,
   toPairs,
 } from 'ramda';
-import produce from 'immer';
-import { FinalizedDocument, renderDoc } from '../../src/doc_store';
-import { Interweave, Node } from 'interweave';
-import { polyfill } from 'interweave-ssr';
-import Tree from '../../components/tree';
-import Head from 'next/head';
-import { AlthaneDate } from '../../src/config';
-import { getTheme, Theme } from '../../src/theme';
-import Path from '../../components/path';
-import Header from '../../components/header';
-import Flag from '../../components/flag';
 import { useState } from 'react';
-import { Transition } from '@headlessui/react';
+import Flag from '../../components/flag';
+import Header from '../../components/header';
+import Path from '../../components/path';
+import Tree from '../../components/tree';
+import { AlthaneDate } from '../../src/config';
+import { Document, urllize } from '../../src/document';
+import { FinalizedDocument, renderDoc } from '../../src/doc_store';
+import { DocumentHierarchy, getData, getTree } from '../../src/markdown';
+import { getTheme, Theme } from '../../src/theme';
 
 polyfill();
 
@@ -257,6 +257,20 @@ const Doc: NextPage<{
               leaveFrom="opacity-100 scale-100 "
               leaveTo="opacity-0 scale-95"
             >
+              {document.name === 'Calendar' ? (
+                <>
+                  <div className="hidden lg:block">
+                    <iframe
+                      src="https://app.fantasy-calendar.com/calendars/d0b318457e0515168107b33c08b19b0e"
+                      width="100%"
+                      height="900px"
+                    ></iframe>
+                  </div>
+                  <div className="lg:hidden">
+                    <p>The calendar is only available on large screens.</p>
+                  </div>
+                </>
+              ) : null}
               <div className="flex flex-row">
                 <div className="lg:basis-5/6">
                   {renderDoc(document).map((section, idx) => {
