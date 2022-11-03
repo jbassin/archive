@@ -263,7 +263,7 @@ const Doc: NextPage<{
                     <iframe
                       src="https://app.fantasy-calendar.com/calendars/d0b318457e0515168107b33c08b19b0e"
                       width="100%"
-                      height="900px"
+                      height="1000px"
                     ></iframe>
                   </div>
                   <div className="lg:hidden">
