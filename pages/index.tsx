@@ -236,6 +236,19 @@ const Index: NextPage<{
     <>
       <Head>
         <title>The Archive</title>
+        <meta
+          property="og:title"
+          key="og:title"
+          content="The Archive • Overview"
+        />
+        <meta property="og:type" key="og:type" content="website" />
+        <meta property="og:url" key="og:url" content={router.pathname} />
+        <meta property="og:image" key="og:image" content="/header1.png" />
+        <meta
+          property="og:description"
+          key="og:description"
+          content="All that is, was, and will be on Althane and the Astra."
+        />
       </Head>
       <div className="container mx-auto mt-6 px-3">
         <Header theme={theme} />

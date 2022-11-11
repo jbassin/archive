@@ -1,0 +1,1 @@
+Betsy is the third owner and proprietor of Pennywright's Last Stand, an inn and bar in Haven. She's a mid-thirties orange-haired amurun, and can often be seen dishing drinks from behind the bar or using her fists to persuade rowdy clientele to calm down.

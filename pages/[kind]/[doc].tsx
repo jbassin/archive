@@ -4,6 +4,7 @@ import { Interweave, Node } from 'interweave';
 import { polyfill } from 'interweave-ssr';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import {
   filter,
   groupBy,
@@ -179,8 +180,25 @@ const Doc: NextPage<{
   tree: DocumentHierarchy;
   path: { kind: string; name: string }[];
 }> = ({ document, tree }) => {
+  const router = useRouter();
   const theme = getTheme(document.config.theme);
   const [toggleFlag, setToggleFlag] = useState(false);
+
+  const renderedDoc = renderDoc(document);
+
+  let og_description = (() => {
+    switch (renderedDoc[0].columns) {
+      case 1:
+        return renderedDoc[0].section;
+
+      case 2:
+        return renderedDoc[0].lhs;
+    }
+  })();
+
+  if (og_description.length >= 265) {
+    og_description = `${og_description.slice(0, 264)}…`;
+  }
 
   return (
     <>
@@ -189,6 +207,21 @@ const Doc: NextPage<{
           The Archive •{' '}
           {!!document.config.dsp ? document.config.dsp : document.name}
         </title>
+        <meta
+          property="og:title"
+          key="og:title"
+          content={`The Archive • ${
+            !!document.config.dsp ? document.config.dsp : document.name
+          }`}
+        />
+        <meta property="og:type" key="og:type" content="website" />
+        <meta property="og:url" key="og:url" content={router.pathname} />
+        <meta property="og:image" key="og:image" content="/header1.png" />
+        <meta
+          property="og:description"
+          key="og:description"
+          content={og_description}
+        />
       </Head>
       <div className="container mx-auto mt-6 px-3">
         <Header theme={theme} subheading={subheading(document.kind)} />
@@ -271,7 +304,7 @@ const Doc: NextPage<{
               ) : null}
               <div className="flex flex-row">
                 <div className="lg:basis-5/6">
-                  {renderDoc(document).map((section, idx) => {
+                  {renderedDoc.map((section, idx) => {
                     switch (section.columns) {
                       case 1: {
                         return (

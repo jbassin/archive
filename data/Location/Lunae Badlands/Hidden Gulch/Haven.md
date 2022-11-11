@@ -5,3 +5,5 @@ It's said that before Grimm arrived the area was a desolate wasteland but he man
 Pilgrims from across the gulch travel to live in Haven, where they're greeted with open arms by the locals. However, the rail companies are all on bad terms with Haven and Grimm, and attempts to build railways to the city are often thwarted to violent effect.
 
 The city's sigil is a crescent moon below a perfect circle.
+
+![A map of haven](/haven.png)
