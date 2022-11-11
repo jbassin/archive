@@ -1,6 +1,9 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const _404 = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
