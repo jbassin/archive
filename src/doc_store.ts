@@ -13,8 +13,8 @@ import {
 import { Config } from './config';
 import { Document, Section, urllize } from './document';
 
-import md from 'markdown-it';
 import { WritableDraft } from 'immer/dist/internal';
+import md from 'markdown-it';
 
 export type FinalizedDocument = {
   id: string;
@@ -168,11 +168,12 @@ export function linkDocuments(documents: Document[]): FinalizedDocument[] {
   );
 
   return produce(inter, (draft) => {
+    const getName: <T>(t: T) => string = prop('name');
     for (const document of draft) {
       document.linked = pipe(
         concat(document.linked),
-        sortBy(prop('name')),
-        uniqBy(prop('name'))
+        sortBy(getName),
+        uniqBy(getName)
       )(backrefrences[document.name] ?? []);
     }
   });

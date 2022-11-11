@@ -1,17 +1,20 @@
+import { MouseEventHandler } from 'react';
 import { Theme } from '../src/theme';
 import Search from './search';
 
 export default function Title({
+  onClick,
   className,
   subheading,
   theme,
 }: {
+  onClick: MouseEventHandler<HTMLDivElement>;
   className?: string;
   subheading?: string;
   theme: Theme;
 }) {
   return (
-    <div className={className}>
+    <div className={className} onClick={onClick}>
       <div className="flex flex-col md:flex-row items-center mt-6 mb-1">
         <h1 className={`${theme.text.primary} ${theme.font.title} text-2xl`}>
           archive.

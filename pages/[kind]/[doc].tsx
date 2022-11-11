@@ -157,8 +157,6 @@ function subheading(kind: string) {
       return 'knowledge of the gods';
     case 'location':
       return 'worldly insight';
-    case 'log':
-      return 'a daily chronicle';
     case 'material':
       return 'fundamental building blocks';
     case 'natural phenomena':

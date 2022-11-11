@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import { Theme } from '../src/theme';
 import Bookend from './bookend';
 import Title from './title';
@@ -11,9 +12,16 @@ export default function Header({
   subheading?: string;
   className?: string;
 }) {
+  const router = useRouter();
+
   return (
     <div className={`${className} flex flex-col`}>
-      <Title subheading={subheading} theme={theme} />
+      <Title
+        className="cursor-pointer"
+        subheading={subheading}
+        theme={theme}
+        onClick={() => router.push('/')}
+      />
       <Bookend theme={theme} />
     </div>
   );
