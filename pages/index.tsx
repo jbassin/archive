@@ -243,7 +243,6 @@ const Index: NextPage<{
         />
         <meta property="og:type" key="og:type" content="website" />
         <meta property="og:url" key="og:url" content={router.pathname} />
-        <meta property="og:image" key="og:image" content="/header1.png" />
         <meta
           property="og:description"
           key="og:description"

@@ -186,7 +186,7 @@ const Doc: NextPage<{
 
   const renderedDoc = renderDoc(document);
 
-  let og_description = (() => {
+  const og_description = (() => {
     switch (renderedDoc[0].columns) {
       case 1:
         return renderedDoc[0].section;
@@ -195,10 +195,6 @@ const Doc: NextPage<{
         return renderedDoc[0].lhs;
     }
   })();
-
-  if (og_description.length >= 265) {
-    og_description = `${og_description.slice(0, 264)}…`;
-  }
 
   return (
     <>
@@ -216,7 +212,6 @@ const Doc: NextPage<{
         />
         <meta property="og:type" key="og:type" content="website" />
         <meta property="og:url" key="og:url" content={router.pathname} />
-        <meta property="og:image" key="og:image" content="/header1.png" />
         <meta
           property="og:description"
           key="og:description"
