@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://archive.iridium-server.com
+
+# Sitemaps
+Sitemap: https://archive.iridium-server.com/sitemap.xml
